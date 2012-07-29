@@ -106,9 +106,9 @@ namespace TCode.r2rml4net.TestCasesRunner
                                     countHandler, 
                                     new WriteThroughHandler(new TurtleW3CFormatter(), streamWriter)
                                 });
-                        IR2RMLProcessor procesor = new W3CR2RMLProcessor(connection, writer);
+                        IR2RMLProcessor procesor = new W3CR2RMLProcessor(connection);
                         var mappings = R2RMLLoader.Load(File.OpenRead(inputMappingPath));
-                        procesor.GenerateTriples(mappings);
+                        procesor.GenerateTriples(mappings, writer);
                     }
                 }
             }
@@ -147,8 +147,8 @@ namespace TCode.r2rml4net.TestCasesRunner
                                     countHandler, 
                                     new WriteThroughHandler(new TurtleW3CFormatter(), streamWriter)
                                 });
-                            IR2RMLProcessor procesor = new W3CR2RMLProcessor(connection, writer);
-                            procesor.GenerateTriples(mappings);
+                            IR2RMLProcessor procesor = new W3CR2RMLProcessor(connection);
+                            procesor.GenerateTriples(mappings, writer);
                         }
                     }
                 }
