@@ -1,0 +1,28 @@
+@prefix test: <http://www.w3.org/2006/03/test-description#> .
+@prefix dcterms: <http://purl.org/dc/elements/1.1/> .
+@prefix rdb2rdftest: <http://purl.org/NET/rdb2rdf-test#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix r2rml: <http://www.w3.org/ns/r2rml#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@base <http://mappingpedia.org/rdb2rdf/tc/> .
+
+<ts> a rdb2rdftest:TestSuite;
+	dcterms:title "Test Suite for R2RML and Direct Mapping" ;
+	dcterms:identifier "TS-MS-01" ;
+	rdb2rdftest:workingDirectory "../test-cases" .
+	
+<myProject>
+        a doap:Project ;
+        doap:name "r2rml4net" ;
+        doap:homepage <https://bitbucket.org/tpluscode/r2rml4net/>  ;
+        doap:programming-language "C#"  ;
+        doap:developer <http://t-code.pl/me#this> ;        
+        rdb2rdftest:dbms r2rml:MSSQLServer ;
+        rdb2rdftest:implementsDirectMapping true ;
+        rdb2rdftest:implementsR2RML true .
+        
+<http://t-code.pl/me#this>
+		a foaf:Person ;
+		foaf:mbox <mailto:tomasz@t-code.pl> ;
+		foaf:name "Tomasz Pluskiewicz" .
+         
