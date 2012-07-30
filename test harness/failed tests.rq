@@ -1,0 +1,15 @@
+prefix earl: <http://www.w3.org/ns/earl#>
+prefix r2rml: <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#>
+
+select distinct ?test
+where
+{
+graph ?g {
+?assertion a earl:Assertion .
+?assertion earl:result ?res .
+?res earl:outcome ?result .
+?asserion earl:test ?test
+}
+filter(iri(?result) = earl:fail)
+}
+order by desc(?result) ?test
