@@ -106,7 +106,7 @@ namespace TCode.r2rml4net.TestCasesRunner
                         IRdfHandler writer = new ChainedHandler(new IRdfHandler[]
                                 {
                                     countHandler, 
-                                    new WriteThroughHandler(new TurtleW3CFormatter(), streamWriter)
+                                    new WriteThroughHandler(new NQuadsFormatter(), streamWriter)
                                 });
                         IR2RMLProcessor procesor = new W3CR2RMLProcessor(connection);
                         var mappings = R2RMLLoader.Load(File.OpenRead(inputMappingPath));
