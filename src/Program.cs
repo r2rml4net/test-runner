@@ -27,7 +27,7 @@ namespace TCode.r2rml4net.TestCasesRunner
             string masterConnection = ConfigurationManager.ConnectionStrings["SqlServer2008Master"].ConnectionString;
 
             string testDir = ConfigurationManager.AppSettings["testDir"];
-            foreach (var testCase in Directory.EnumerateDirectories(testDir, "D*").Skip(1).Take(1))
+            foreach (var testCase in Directory.EnumerateDirectories(testDir, "D*"))
             {
                 Console.Out.WriteLine("Test case {0}: ", testCase);
 
@@ -57,6 +57,8 @@ namespace TCode.r2rml4net.TestCasesRunner
                         ExecuteCommand(connection, "ALTER DATABASE r2rml4net_tests SET MULTI_USER");
                     }
                 }
+
+                Console.WriteLine();
             }
         }
 
