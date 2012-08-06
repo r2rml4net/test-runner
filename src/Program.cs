@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Data.Common;
 using System.Data.SqlClient;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 using DatabaseSchemaReader;
 using TCode.r2rml4net.Mapping;
+using TCode.r2rml4net.Mapping.DirectMapping;
 using TCode.r2rml4net.RDB.DatabaseSchemaReader;
 using TCode.r2rml4net.TriplesGeneration;
 using VDS.RDF;
@@ -21,9 +19,13 @@ namespace TCode.r2rml4net.TestCasesRunner
     class Program
     {
         static readonly IColumnTypeMapper ColumnTypeMapper = new MSSQLServerColumTypeMapper();
+        private static StreamWriter _r2rmlLog, _directLog;
 
         static void Main(string[] args)
         {
+            _r2rmlLog = new StreamWriter("r2rml.log");
+            _directLog = new StreamWriter("direct.log");
+
             string masterConnection = ConfigurationManager.ConnectionStrings["SqlServer2008Master"].ConnectionString;
 
             string testDir = ConfigurationManager.AppSettings["testDir"];
@@ -59,6 +61,7 @@ namespace TCode.r2rml4net.TestCasesRunner
                 }
 
                 Console.WriteLine();
+
             }
         }
 
@@ -97,6 +100,9 @@ namespace TCode.r2rml4net.TestCasesRunner
 
             var countHandler = new CountHandler();
 
+            _r2rmlLog.WriteLine();
+            _r2rmlLog.WriteLine(inputMappingPath);
+            ErrorCounterLog log = new ErrorCounterLog(_r2rmlLog);
             try
             {
                 using (var directStream = File.Create(outputDatasetPath))
@@ -108,7 +114,14 @@ namespace TCode.r2rml4net.TestCasesRunner
                                     countHandler, 
                                     new WriteThroughHandler(new NQuadsFormatter(), streamWriter)
                                 });
-                        IR2RMLProcessor procesor = new W3CR2RMLProcessor(connection);
+                        IRDFTermGenerator termGen = new RDFTermGenerator
+                        {
+                            Log = log
+                        };
+                        IR2RMLProcessor procesor = new W3CR2RMLProcessor(connection, termGen)
+                            {
+                                Log = log
+                            };
                         var mappings = R2RMLLoader.Load(File.OpenRead(inputMappingPath));
                         procesor.GenerateTriples(mappings, writer);
                     }
@@ -120,7 +133,7 @@ namespace TCode.r2rml4net.TestCasesRunner
                 return;
             }
 
-            Console.Out.WriteLine("SUCCESS! {0} triples generated", countHandler.Count);
+            ReportResult(outputDatasetPath, countHandler, log);
         }
 
         private static void ExecuteDirectMappingTest(DbConnection connection, string directMappingOutputPath)
@@ -129,6 +142,9 @@ namespace TCode.r2rml4net.TestCasesRunner
 
             var countHandler = new CountHandler();
 
+            _directLog.WriteLine();
+            _directLog.WriteLine(directMappingOutputPath);
+            var log = new ErrorCounterLog(_directLog);
             try
             {
                 using (var directStream = File.Create(directMappingOutputPath))
@@ -140,7 +156,7 @@ namespace TCode.r2rml4net.TestCasesRunner
                         {
                             var r2RMLConfiguration = new R2RMLConfiguration(new Uri("http://example.com/base/"));
                             var metadataProvider = new DatabaseSchemaAdapter(databaseReader, ColumnTypeMapper);
-                            var mappingGenerator = new DefaultR2RMLMappingGenerator(metadataProvider, r2RMLConfiguration);
+                            var mappingGenerator = new R2RMLMappingGenerator(metadataProvider, r2RMLConfiguration);
 
                             var mappings = mappingGenerator.GenerateMappings();
 
@@ -149,7 +165,14 @@ namespace TCode.r2rml4net.TestCasesRunner
                                     countHandler, 
                                     new WriteThroughHandler(new TurtleW3CFormatter(), streamWriter)
                                 });
-                            IR2RMLProcessor procesor = new W3CR2RMLProcessor(connection);
+                            IRDFTermGenerator termGen = new RDFTermGenerator
+                                {
+                                    Log = log
+                                };
+                            IR2RMLProcessor procesor = new W3CR2RMLProcessor(connection, termGen)
+                                {
+                                    Log = log
+                                };
                             procesor.GenerateTriples(mappings, writer);
                         }
                     }
@@ -161,7 +184,20 @@ namespace TCode.r2rml4net.TestCasesRunner
                 return;
             }
 
-            Console.Out.WriteLine("SUCCESS! {0} triples generated", countHandler.Count);
+            ReportResult(directMappingOutputPath, countHandler, log);
+        }
+
+        private static void ReportResult(string outputPath, CountHandler countHandler, ErrorCounterLog log)
+        {
+            if (log.ErrorsCount == 0)
+            {
+                Console.Out.WriteLine("SUCCESS! {0} triples generated", countHandler.Count);
+            }
+            else
+            {
+                Console.Out.WriteLine("SUCCESS! No output file produced");
+                File.Delete(outputPath);
+            }
         }
     }
 }
