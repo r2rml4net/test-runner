@@ -165,7 +165,7 @@ namespace TCode.r2rml4net.TestCasesRunner
                                     countHandler, 
                                     new WriteThroughHandler(new TurtleW3CFormatter(), streamWriter)
                                 });
-                            IRDFTermGenerator termGen = new RDFTermGenerator
+                            IRDFTermGenerator termGen = new RDFTermGenerator(true)
                                 {
                                     Log = log
                                 };
