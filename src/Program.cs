@@ -181,6 +181,7 @@ namespace TCode.r2rml4net.TestCasesRunner
             catch (Exception ex)
             {
                 Console.Out.WriteLine("FAIL! {0}", ex.Message);
+                File.Delete(directMappingOutputPath);
                 return;
             }
 
