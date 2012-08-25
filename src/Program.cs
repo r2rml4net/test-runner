@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using DatabaseSchemaReader;
+using TCode.r2rml4net.Log;
 using TCode.r2rml4net.Mapping;
 using TCode.r2rml4net.Mapping.DirectMapping;
 using TCode.r2rml4net.RDB.DatabaseSchemaReader;
@@ -19,12 +20,13 @@ namespace TCode.r2rml4net.TestCasesRunner
     class Program
     {
         static readonly IColumnTypeMapper ColumnTypeMapper = new MSSQLServerColumTypeMapper();
-        private static StreamWriter _r2RMLLog, _directLog;
+        private static StreamWriter _r2RMLLogWriter, _directLogWriter;
+        private static TextWriterLog _log;
 
         static void Main()
         {
-            _r2RMLLog = new StreamWriter("r2rml.log");
-            _directLog = new StreamWriter("direct.log");
+            _r2RMLLogWriter = new StreamWriter("r2rml.log");
+            _directLogWriter = new StreamWriter("direct.log");
 
             string masterConnection = ConfigurationManager.ConnectionStrings["SqlServer2008Master"].ConnectionString;
 
@@ -87,8 +89,10 @@ namespace TCode.r2rml4net.TestCasesRunner
                 command.ExecuteNonQuery();
             }
 
+            _log = new TextWriterLog(_directLogWriter);
             ExecuteDirectMappingTest(connection, directOutput);
 
+            _log = new TextWriterLog(_r2RMLLogWriter);
             foreach (var mappingFile in Directory.EnumerateFiles(testCaseDirectory, "r2rml*"))
             {
                 string outputDatasetPath = Regex.Replace(mappingFile, @"r2rml([a-z]*)\.ttl$", "mapped$1-r2rml4net.nq");
@@ -100,8 +104,8 @@ namespace TCode.r2rml4net.TestCasesRunner
         {
             Console.Out.Write("R2RML: ");
 
-            _r2RMLLog.WriteLine();
-            _r2RMLLog.WriteLine(inputMappingPath);
+            _r2RMLLogWriter.WriteLine();
+            _r2RMLLogWriter.WriteLine(inputMappingPath);
             var mappings = new Func<IR2RML>(() => R2RMLLoader.Load(File.OpenRead(inputMappingPath)));
             GenerateTriples(mappings, outputDatasetPath, connection, new RDFTermGenerator());
         }
@@ -110,14 +114,18 @@ namespace TCode.r2rml4net.TestCasesRunner
         {
             Console.Out.Write("DIRECT: ");
 
-            _directLog.WriteLine();
-            _directLog.WriteLine(directMappingOutputPath);
+            _directLogWriter.WriteLine();
+            _directLogWriter.WriteLine(directMappingOutputPath);
             var connectionString = ConfigurationManager.ConnectionStrings["SqlServer2008Test"];
             using (var databaseReader = new DatabaseReader(connectionString.ConnectionString, connectionString.ProviderName))
             {
                 var r2RMLConfiguration = new R2RMLConfiguration(new Uri("http://example.com/base/"));
                 var metadataProvider = new DatabaseSchemaAdapter(databaseReader, ColumnTypeMapper);
-                var mappingGenerator = new R2RMLMappingGenerator(metadataProvider, r2RMLConfiguration);
+                var mappingGenerator = new R2RMLMappingGenerator(metadataProvider, r2RMLConfiguration, new MappingOptions
+                {
+                    IgnoreDataErrors = false,
+                    IgnoreMappingErrors = false
+                });
 
                 var mappings = new Func<IR2RML>(mappingGenerator.GenerateMappings);
                 GenerateTriples(mappings, directMappingOutputPath, connection, new RDFTermGenerator(true));
@@ -128,9 +136,17 @@ namespace TCode.r2rml4net.TestCasesRunner
         {
             File.Delete(outPath);
             ITripleStore store;
+            IR2RMLProcessor processor;
             try
             {
-                IR2RMLProcessor processor = new W3CR2RMLProcessor(connection, termGen);
+                processor = new W3CR2RMLProcessor(connection, termGen, new MappingOptions
+                    {
+                        IgnoreDataErrors = false,
+                        IgnoreMappingErrors = false
+                    })
+                    {
+                        Log = _log
+                    };
                 store = processor.GenerateTriples(createMappings());
             }
             catch (Exception ex)
@@ -139,8 +155,15 @@ namespace TCode.r2rml4net.TestCasesRunner
                 return;
             }
 
-            store.SaveToFile(outPath, new NQuadsWriter());
-            Console.Out.WriteLine("SUCCESS! {0} triples generated", store.Triples.Count());
+            if (processor.Success)
+            {
+                store.SaveToFile(outPath, new NQuadsWriter());
+                Console.Out.WriteLine("SUCCESS! {0} triples generated", store.Triples.Count());
+            }
+            else
+            {
+                Console.Out.WriteLine("SUCCESS! No dataset generated");
+            }
         }
     }
 }
