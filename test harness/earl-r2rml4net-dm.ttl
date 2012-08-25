@@ -6,75 +6,7 @@
       <http://www.w3.org/ns/earl#result>
               [ a       <http://www.w3.org/ns/earl#TestResult> ;
                 <http://purl.org/dc/elements/1.1/date>
-                        "2012-08-17T16:34:49"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-                <http://www.w3.org/ns/earl#outcome>
-                        <http://www.w3.org/ns/earl#pass>
-              ] ;
-      <http://www.w3.org/ns/earl#subject>
-              <http://mappingpedia.org/rdb2rdf/myProject/r2rml4net> ;
-      <http://www.w3.org/ns/earl#test>
-              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0013> .
-
-[]    a       <http://www.w3.org/ns/earl#Assertion> ;
-      <http://purl.org/NET/rdb2rdf-test#dbms>
-              <http://www.w3.org/ns/r2rml#MSSQLServer> ;
-      <http://www.w3.org/ns/earl#assertedBy>
-              <http://mappingpedia.org/rdb2rdf/myTestHarness> ;
-      <http://www.w3.org/ns/earl#result>
-              [ a       <http://www.w3.org/ns/earl#TestResult> ;
-                <http://purl.org/dc/elements/1.1/date>
-                        "2012-08-17T16:34:48"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-                <http://www.w3.org/ns/earl#outcome>
-                        <http://www.w3.org/ns/earl#pass>
-              ] ;
-      <http://www.w3.org/ns/earl#subject>
-              <http://mappingpedia.org/rdb2rdf/myProject/r2rml4net> ;
-      <http://www.w3.org/ns/earl#test>
-              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0002> .
-
-[]    a       <http://www.w3.org/ns/earl#Assertion> ;
-      <http://purl.org/NET/rdb2rdf-test#dbms>
-              <http://www.w3.org/ns/r2rml#MSSQLServer> ;
-      <http://www.w3.org/ns/earl#assertedBy>
-              <http://mappingpedia.org/rdb2rdf/myTestHarness> ;
-      <http://www.w3.org/ns/earl#result>
-              [ a       <http://www.w3.org/ns/earl#TestResult> ;
-                <http://purl.org/dc/elements/1.1/date>
-                        "2012-08-17T16:34:49"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-                <http://www.w3.org/ns/earl#outcome>
-                        <http://www.w3.org/ns/earl#pass>
-              ] ;
-      <http://www.w3.org/ns/earl#subject>
-              <http://mappingpedia.org/rdb2rdf/myProject/r2rml4net> ;
-      <http://www.w3.org/ns/earl#test>
-              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0008> .
-
-[]    a       <http://www.w3.org/ns/earl#Assertion> ;
-      <http://purl.org/NET/rdb2rdf-test#dbms>
-              <http://www.w3.org/ns/r2rml#MSSQLServer> ;
-      <http://www.w3.org/ns/earl#assertedBy>
-              <http://mappingpedia.org/rdb2rdf/myTestHarness> ;
-      <http://www.w3.org/ns/earl#result>
-              [ a       <http://www.w3.org/ns/earl#TestResult> ;
-                <http://purl.org/dc/elements/1.1/date>
-                        "2012-08-17T16:34:48"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-                <http://www.w3.org/ns/earl#outcome>
-                        <http://www.w3.org/ns/earl#pass>
-              ] ;
-      <http://www.w3.org/ns/earl#subject>
-              <http://mappingpedia.org/rdb2rdf/myProject/r2rml4net> ;
-      <http://www.w3.org/ns/earl#test>
-              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0003> .
-
-[]    a       <http://www.w3.org/ns/earl#Assertion> ;
-      <http://purl.org/NET/rdb2rdf-test#dbms>
-              <http://www.w3.org/ns/r2rml#MSSQLServer> ;
-      <http://www.w3.org/ns/earl#assertedBy>
-              <http://mappingpedia.org/rdb2rdf/myTestHarness> ;
-      <http://www.w3.org/ns/earl#result>
-              [ a       <http://www.w3.org/ns/earl#TestResult> ;
-                <http://purl.org/dc/elements/1.1/date>
-                        "2012-08-17T16:34:49"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                        "2012-08-25T10:58:41"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
                 <http://www.w3.org/ns/earl#outcome>
                         <http://www.w3.org/ns/earl#pass>
               ] ;
@@ -91,14 +23,14 @@
       <http://www.w3.org/ns/earl#result>
               [ a       <http://www.w3.org/ns/earl#TestResult> ;
                 <http://purl.org/dc/elements/1.1/date>
-                        "2012-08-17T16:34:49"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                        "2012-08-25T10:58:45"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
                 <http://www.w3.org/ns/earl#outcome>
                         <http://www.w3.org/ns/earl#pass>
               ] ;
       <http://www.w3.org/ns/earl#subject>
               <http://mappingpedia.org/rdb2rdf/myProject/r2rml4net> ;
       <http://www.w3.org/ns/earl#test>
-              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0007> .
+              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0025> .
 
 []    a       <http://www.w3.org/ns/earl#Assertion> ;
       <http://purl.org/NET/rdb2rdf-test#dbms>
@@ -108,24 +40,7 @@
       <http://www.w3.org/ns/earl#result>
               [ a       <http://www.w3.org/ns/earl#TestResult> ;
                 <http://purl.org/dc/elements/1.1/date>
-                        "2012-08-17T16:34:50"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-                <http://www.w3.org/ns/earl#outcome>
-                        <http://www.w3.org/ns/earl#pass>
-              ] ;
-      <http://www.w3.org/ns/earl#subject>
-              <http://mappingpedia.org/rdb2rdf/myProject/r2rml4net> ;
-      <http://www.w3.org/ns/earl#test>
-              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0023> .
-
-[]    a       <http://www.w3.org/ns/earl#Assertion> ;
-      <http://purl.org/NET/rdb2rdf-test#dbms>
-              <http://www.w3.org/ns/r2rml#MSSQLServer> ;
-      <http://www.w3.org/ns/earl#assertedBy>
-              <http://mappingpedia.org/rdb2rdf/myTestHarness> ;
-      <http://www.w3.org/ns/earl#result>
-              [ a       <http://www.w3.org/ns/earl#TestResult> ;
-                <http://purl.org/dc/elements/1.1/date>
-                        "2012-08-17T16:34:50"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                        "2012-08-25T10:58:44"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
                 <http://www.w3.org/ns/earl#outcome>
                         <http://www.w3.org/ns/earl#pass>
               ] ;
@@ -142,14 +57,14 @@
       <http://www.w3.org/ns/earl#result>
               [ a       <http://www.w3.org/ns/earl#TestResult> ;
                 <http://purl.org/dc/elements/1.1/date>
-                        "2012-08-17T16:34:50"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                        "2012-08-25T10:58:38"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
                 <http://www.w3.org/ns/earl#outcome>
                         <http://www.w3.org/ns/earl#pass>
               ] ;
       <http://www.w3.org/ns/earl#subject>
               <http://mappingpedia.org/rdb2rdf/myProject/r2rml4net> ;
       <http://www.w3.org/ns/earl#test>
-              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0021> .
+              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0002> .
 
 []    a       <http://www.w3.org/ns/earl#Assertion> ;
       <http://purl.org/NET/rdb2rdf-test#dbms>
@@ -159,14 +74,14 @@
       <http://www.w3.org/ns/earl#result>
               [ a       <http://www.w3.org/ns/earl#TestResult> ;
                 <http://purl.org/dc/elements/1.1/date>
-                        "2012-08-17T16:34:49"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                        "2012-08-25T10:58:42"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
                 <http://www.w3.org/ns/earl#outcome>
                         <http://www.w3.org/ns/earl#pass>
               ] ;
       <http://www.w3.org/ns/earl#subject>
               <http://mappingpedia.org/rdb2rdf/myProject/r2rml4net> ;
       <http://www.w3.org/ns/earl#test>
-              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0018> .
+              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0014> .
 
 []    a       <http://www.w3.org/ns/earl#Assertion> ;
       <http://purl.org/NET/rdb2rdf-test#dbms>
@@ -176,17 +91,14 @@
       <http://www.w3.org/ns/earl#result>
               [ a       <http://www.w3.org/ns/earl#TestResult> ;
                 <http://purl.org/dc/elements/1.1/date>
-                        "2012-08-17T16:34:49"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                        "2012-08-25T10:58:38"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
                 <http://www.w3.org/ns/earl#outcome>
                         <http://www.w3.org/ns/earl#pass>
               ] ;
       <http://www.w3.org/ns/earl#subject>
               <http://mappingpedia.org/rdb2rdf/myProject/r2rml4net> ;
       <http://www.w3.org/ns/earl#test>
-              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0015> .
-
-<http://mappingpedia.org/rdb2rdf/myTestHarness>
-      a       <http://www.w3.org/ns/earl#Software> .
+              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0001> .
 
 []    a       <http://www.w3.org/ns/earl#Assertion> ;
       <http://purl.org/NET/rdb2rdf-test#dbms>
@@ -196,24 +108,7 @@
       <http://www.w3.org/ns/earl#result>
               [ a       <http://www.w3.org/ns/earl#TestResult> ;
                 <http://purl.org/dc/elements/1.1/date>
-                        "2012-08-17T16:34:48"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-                <http://www.w3.org/ns/earl#outcome>
-                        <http://www.w3.org/ns/earl#pass>
-              ] ;
-      <http://www.w3.org/ns/earl#subject>
-              <http://mappingpedia.org/rdb2rdf/myProject/r2rml4net> ;
-      <http://www.w3.org/ns/earl#test>
-              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0005> .
-
-[]    a       <http://www.w3.org/ns/earl#Assertion> ;
-      <http://purl.org/NET/rdb2rdf-test#dbms>
-              <http://www.w3.org/ns/r2rml#MSSQLServer> ;
-      <http://www.w3.org/ns/earl#assertedBy>
-              <http://mappingpedia.org/rdb2rdf/myTestHarness> ;
-      <http://www.w3.org/ns/earl#result>
-              [ a       <http://www.w3.org/ns/earl#TestResult> ;
-                <http://purl.org/dc/elements/1.1/date>
-                        "2012-08-17T16:34:48"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                        "2012-08-25T10:58:39"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
                 <http://www.w3.org/ns/earl#outcome>
                         <http://www.w3.org/ns/earl#pass>
               ] ;
@@ -230,7 +125,24 @@
       <http://www.w3.org/ns/earl#result>
               [ a       <http://www.w3.org/ns/earl#TestResult> ;
                 <http://purl.org/dc/elements/1.1/date>
-                        "2012-08-17T16:34:49"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                        "2012-08-25T10:58:41"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                <http://www.w3.org/ns/earl#outcome>
+                        <http://www.w3.org/ns/earl#pass>
+              ] ;
+      <http://www.w3.org/ns/earl#subject>
+              <http://mappingpedia.org/rdb2rdf/myProject/r2rml4net> ;
+      <http://www.w3.org/ns/earl#test>
+              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0012> .
+
+[]    a       <http://www.w3.org/ns/earl#Assertion> ;
+      <http://purl.org/NET/rdb2rdf-test#dbms>
+              <http://www.w3.org/ns/r2rml#MSSQLServer> ;
+      <http://www.w3.org/ns/earl#assertedBy>
+              <http://mappingpedia.org/rdb2rdf/myTestHarness> ;
+      <http://www.w3.org/ns/earl#result>
+              [ a       <http://www.w3.org/ns/earl#TestResult> ;
+                <http://purl.org/dc/elements/1.1/date>
+                        "2012-08-25T10:58:41"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
                 <http://www.w3.org/ns/earl#outcome>
                         <http://www.w3.org/ns/earl#pass>
               ] ;
@@ -238,6 +150,145 @@
               <http://mappingpedia.org/rdb2rdf/myProject/r2rml4net> ;
       <http://www.w3.org/ns/earl#test>
               <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0011> .
+
+[]    a       <http://www.w3.org/ns/earl#Assertion> ;
+      <http://purl.org/NET/rdb2rdf-test#dbms>
+              <http://www.w3.org/ns/r2rml#MSSQLServer> ;
+      <http://www.w3.org/ns/earl#assertedBy>
+              <http://mappingpedia.org/rdb2rdf/myTestHarness> ;
+      <http://www.w3.org/ns/earl#result>
+              [ a       <http://www.w3.org/ns/earl#TestResult> ;
+                <http://purl.org/dc/elements/1.1/date>
+                        "2012-08-25T10:58:44"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                <http://www.w3.org/ns/earl#outcome>
+                        <http://www.w3.org/ns/earl#pass>
+              ] ;
+      <http://www.w3.org/ns/earl#subject>
+              <http://mappingpedia.org/rdb2rdf/myProject/r2rml4net> ;
+      <http://www.w3.org/ns/earl#test>
+              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0023> .
+
+[]    a       <http://www.w3.org/ns/earl#Assertion> ;
+      <http://purl.org/NET/rdb2rdf-test#dbms>
+              <http://www.w3.org/ns/r2rml#MSSQLServer> ;
+      <http://www.w3.org/ns/earl#assertedBy>
+              <http://mappingpedia.org/rdb2rdf/myTestHarness> ;
+      <http://www.w3.org/ns/earl#result>
+              [ a       <http://www.w3.org/ns/earl#TestResult> ;
+                <http://purl.org/dc/elements/1.1/date>
+                        "2012-08-25T10:58:39"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                <http://www.w3.org/ns/earl#outcome>
+                        <http://www.w3.org/ns/earl#pass>
+              ] ;
+      <http://www.w3.org/ns/earl#subject>
+              <http://mappingpedia.org/rdb2rdf/myProject/r2rml4net> ;
+      <http://www.w3.org/ns/earl#test>
+              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0005> .
+
+[]    a       <http://www.w3.org/ns/earl#Assertion> ;
+      <http://purl.org/NET/rdb2rdf-test#dbms>
+              <http://www.w3.org/ns/r2rml#MSSQLServer> ;
+      <http://www.w3.org/ns/earl#assertedBy>
+              <http://mappingpedia.org/rdb2rdf/myTestHarness> ;
+      <http://www.w3.org/ns/earl#result>
+              [ a       <http://www.w3.org/ns/earl#TestResult> ;
+                <http://purl.org/dc/elements/1.1/date>
+                        "2012-08-25T10:58:40"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                <http://www.w3.org/ns/earl#outcome>
+                        <http://www.w3.org/ns/earl#pass>
+              ] ;
+      <http://www.w3.org/ns/earl#subject>
+              <http://mappingpedia.org/rdb2rdf/myProject/r2rml4net> ;
+      <http://www.w3.org/ns/earl#test>
+              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0007> .
+
+[]    a       <http://www.w3.org/ns/earl#Assertion> ;
+      <http://purl.org/NET/rdb2rdf-test#dbms>
+              <http://www.w3.org/ns/r2rml#MSSQLServer> ;
+      <http://www.w3.org/ns/earl#assertedBy>
+              <http://mappingpedia.org/rdb2rdf/myTestHarness> ;
+      <http://www.w3.org/ns/earl#result>
+              [ a       <http://www.w3.org/ns/earl#TestResult> ;
+                <http://purl.org/dc/elements/1.1/date>
+                        "2012-08-25T10:58:43"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                <http://www.w3.org/ns/earl#outcome>
+                        <http://www.w3.org/ns/earl#fail>
+              ] ;
+      <http://www.w3.org/ns/earl#subject>
+              <http://mappingpedia.org/rdb2rdf/myProject/r2rml4net> ;
+      <http://www.w3.org/ns/earl#test>
+              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0017> .
+
+<http://mappingpedia.org/rdb2rdf/myTestHarness>
+      a       <http://www.w3.org/ns/earl#Software> .
+
+[]    a       <http://www.w3.org/ns/earl#Assertion> ;
+      <http://purl.org/NET/rdb2rdf-test#dbms>
+              <http://www.w3.org/ns/r2rml#MSSQLServer> ;
+      <http://www.w3.org/ns/earl#assertedBy>
+              <http://mappingpedia.org/rdb2rdf/myTestHarness> ;
+      <http://www.w3.org/ns/earl#result>
+              [ a       <http://www.w3.org/ns/earl#TestResult> ;
+                <http://purl.org/dc/elements/1.1/date>
+                        "2012-08-25T10:58:44"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                <http://www.w3.org/ns/earl#outcome>
+                        <http://www.w3.org/ns/earl#pass>
+              ] ;
+      <http://www.w3.org/ns/earl#subject>
+              <http://mappingpedia.org/rdb2rdf/myProject/r2rml4net> ;
+      <http://www.w3.org/ns/earl#test>
+              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0021> .
+
+[]    a       <http://www.w3.org/ns/earl#Assertion> ;
+      <http://purl.org/NET/rdb2rdf-test#dbms>
+              <http://www.w3.org/ns/r2rml#MSSQLServer> ;
+      <http://www.w3.org/ns/earl#assertedBy>
+              <http://mappingpedia.org/rdb2rdf/myTestHarness> ;
+      <http://www.w3.org/ns/earl#result>
+              [ a       <http://www.w3.org/ns/earl#TestResult> ;
+                <http://purl.org/dc/elements/1.1/date>
+                        "2012-08-25T10:58:40"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                <http://www.w3.org/ns/earl#outcome>
+                        <http://www.w3.org/ns/earl#pass>
+              ] ;
+      <http://www.w3.org/ns/earl#subject>
+              <http://mappingpedia.org/rdb2rdf/myProject/r2rml4net> ;
+      <http://www.w3.org/ns/earl#test>
+              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0009> .
+
+[]    a       <http://www.w3.org/ns/earl#Assertion> ;
+      <http://purl.org/NET/rdb2rdf-test#dbms>
+              <http://www.w3.org/ns/r2rml#MSSQLServer> ;
+      <http://www.w3.org/ns/earl#assertedBy>
+              <http://mappingpedia.org/rdb2rdf/myTestHarness> ;
+      <http://www.w3.org/ns/earl#result>
+              [ a       <http://www.w3.org/ns/earl#TestResult> ;
+                <http://purl.org/dc/elements/1.1/date>
+                        "2012-08-25T10:58:42"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                <http://www.w3.org/ns/earl#outcome>
+                        <http://www.w3.org/ns/earl#pass>
+              ] ;
+      <http://www.w3.org/ns/earl#subject>
+              <http://mappingpedia.org/rdb2rdf/myProject/r2rml4net> ;
+      <http://www.w3.org/ns/earl#test>
+              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0016> .
+
+[]    a       <http://www.w3.org/ns/earl#Assertion> ;
+      <http://purl.org/NET/rdb2rdf-test#dbms>
+              <http://www.w3.org/ns/r2rml#MSSQLServer> ;
+      <http://www.w3.org/ns/earl#assertedBy>
+              <http://mappingpedia.org/rdb2rdf/myTestHarness> ;
+      <http://www.w3.org/ns/earl#result>
+              [ a       <http://www.w3.org/ns/earl#TestResult> ;
+                <http://purl.org/dc/elements/1.1/date>
+                        "2012-08-25T10:58:40"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                <http://www.w3.org/ns/earl#outcome>
+                        <http://www.w3.org/ns/earl#pass>
+              ] ;
+      <http://www.w3.org/ns/earl#subject>
+              <http://mappingpedia.org/rdb2rdf/myProject/r2rml4net> ;
+      <http://www.w3.org/ns/earl#test>
+              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0008> .
 
 <http://mappingpedia.org/rdb2rdf/myProject/r2rml4net>
       a       <http://usefulinc.com/ns/doap#Project> ;
@@ -262,31 +313,14 @@
       <http://www.w3.org/ns/earl#result>
               [ a       <http://www.w3.org/ns/earl#TestResult> ;
                 <http://purl.org/dc/elements/1.1/date>
-                        "2012-08-17T16:34:49"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-                <http://www.w3.org/ns/earl#outcome>
-                        <http://www.w3.org/ns/earl#fail>
-              ] ;
-      <http://www.w3.org/ns/earl#subject>
-              <http://mappingpedia.org/rdb2rdf/myProject/r2rml4net> ;
-      <http://www.w3.org/ns/earl#test>
-              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0017> .
-
-[]    a       <http://www.w3.org/ns/earl#Assertion> ;
-      <http://purl.org/NET/rdb2rdf-test#dbms>
-              <http://www.w3.org/ns/r2rml#MSSQLServer> ;
-      <http://www.w3.org/ns/earl#assertedBy>
-              <http://mappingpedia.org/rdb2rdf/myTestHarness> ;
-      <http://www.w3.org/ns/earl#result>
-              [ a       <http://www.w3.org/ns/earl#TestResult> ;
-                <http://purl.org/dc/elements/1.1/date>
-                        "2012-08-17T16:34:50"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                        "2012-08-25T10:58:42"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
                 <http://www.w3.org/ns/earl#outcome>
                         <http://www.w3.org/ns/earl#pass>
               ] ;
       <http://www.w3.org/ns/earl#subject>
               <http://mappingpedia.org/rdb2rdf/myProject/r2rml4net> ;
       <http://www.w3.org/ns/earl#test>
-              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0024> .
+              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0015> .
 
 []    a       <http://www.w3.org/ns/earl#Assertion> ;
       <http://purl.org/NET/rdb2rdf-test#dbms>
@@ -296,7 +330,7 @@
       <http://www.w3.org/ns/earl#result>
               [ a       <http://www.w3.org/ns/earl#TestResult> ;
                 <http://purl.org/dc/elements/1.1/date>
-                        "2012-08-17T16:34:48"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                        "2012-08-25T10:58:39"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
                 <http://www.w3.org/ns/earl#outcome>
                         <http://www.w3.org/ns/earl#pass>
               ] ;
@@ -313,14 +347,14 @@
       <http://www.w3.org/ns/earl#result>
               [ a       <http://www.w3.org/ns/earl#TestResult> ;
                 <http://purl.org/dc/elements/1.1/date>
-                        "2012-08-17T16:34:50"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                        "2012-08-25T10:58:43"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
                 <http://www.w3.org/ns/earl#outcome>
                         <http://www.w3.org/ns/earl#pass>
               ] ;
       <http://www.w3.org/ns/earl#subject>
               <http://mappingpedia.org/rdb2rdf/myProject/r2rml4net> ;
       <http://www.w3.org/ns/earl#test>
-              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0025> .
+              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0018> .
 
 []    a       <http://www.w3.org/ns/earl#Assertion> ;
       <http://purl.org/NET/rdb2rdf-test#dbms>
@@ -330,14 +364,14 @@
       <http://www.w3.org/ns/earl#result>
               [ a       <http://www.w3.org/ns/earl#TestResult> ;
                 <http://purl.org/dc/elements/1.1/date>
-                        "2012-08-17T16:34:49"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                        "2012-08-25T10:58:42"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
                 <http://www.w3.org/ns/earl#outcome>
                         <http://www.w3.org/ns/earl#pass>
               ] ;
       <http://www.w3.org/ns/earl#subject>
               <http://mappingpedia.org/rdb2rdf/myProject/r2rml4net> ;
       <http://www.w3.org/ns/earl#test>
-              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0016> .
+              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0013> .
 
 []    a       <http://www.w3.org/ns/earl#Assertion> ;
       <http://purl.org/NET/rdb2rdf-test#dbms>
@@ -347,14 +381,14 @@
       <http://www.w3.org/ns/earl#result>
               [ a       <http://www.w3.org/ns/earl#TestResult> ;
                 <http://purl.org/dc/elements/1.1/date>
-                        "2012-08-17T16:34:48"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                        "2012-08-25T10:58:44"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
                 <http://www.w3.org/ns/earl#outcome>
                         <http://www.w3.org/ns/earl#pass>
               ] ;
       <http://www.w3.org/ns/earl#subject>
               <http://mappingpedia.org/rdb2rdf/myProject/r2rml4net> ;
       <http://www.w3.org/ns/earl#test>
-              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0001> .
+              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0024> .
 
 []    a       <http://www.w3.org/ns/earl#Assertion> ;
       <http://purl.org/NET/rdb2rdf-test#dbms>
@@ -364,48 +398,14 @@
       <http://www.w3.org/ns/earl#result>
               [ a       <http://www.w3.org/ns/earl#TestResult> ;
                 <http://purl.org/dc/elements/1.1/date>
-                        "2012-08-17T16:34:48"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                        "2012-08-25T10:58:39"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
                 <http://www.w3.org/ns/earl#outcome>
                         <http://www.w3.org/ns/earl#pass>
               ] ;
       <http://www.w3.org/ns/earl#subject>
               <http://mappingpedia.org/rdb2rdf/myProject/r2rml4net> ;
       <http://www.w3.org/ns/earl#test>
-              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0000> .
-
-[]    a       <http://www.w3.org/ns/earl#Assertion> ;
-      <http://purl.org/NET/rdb2rdf-test#dbms>
-              <http://www.w3.org/ns/r2rml#MSSQLServer> ;
-      <http://www.w3.org/ns/earl#assertedBy>
-              <http://mappingpedia.org/rdb2rdf/myTestHarness> ;
-      <http://www.w3.org/ns/earl#result>
-              [ a       <http://www.w3.org/ns/earl#TestResult> ;
-                <http://purl.org/dc/elements/1.1/date>
-                        "2012-08-17T16:34:49"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-                <http://www.w3.org/ns/earl#outcome>
-                        <http://www.w3.org/ns/earl#pass>
-              ] ;
-      <http://www.w3.org/ns/earl#subject>
-              <http://mappingpedia.org/rdb2rdf/myProject/r2rml4net> ;
-      <http://www.w3.org/ns/earl#test>
-              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0009> .
-
-[]    a       <http://www.w3.org/ns/earl#Assertion> ;
-      <http://purl.org/NET/rdb2rdf-test#dbms>
-              <http://www.w3.org/ns/r2rml#MSSQLServer> ;
-      <http://www.w3.org/ns/earl#assertedBy>
-              <http://mappingpedia.org/rdb2rdf/myTestHarness> ;
-      <http://www.w3.org/ns/earl#result>
-              [ a       <http://www.w3.org/ns/earl#TestResult> ;
-                <http://purl.org/dc/elements/1.1/date>
-                        "2012-08-17T16:34:49"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-                <http://www.w3.org/ns/earl#outcome>
-                        <http://www.w3.org/ns/earl#pass>
-              ] ;
-      <http://www.w3.org/ns/earl#subject>
-              <http://mappingpedia.org/rdb2rdf/myProject/r2rml4net> ;
-      <http://www.w3.org/ns/earl#test>
-              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0012> .
+              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0003> .
 
 <http://t-code.pl/me#this>
       <http://xmlns.com/foaf/0.1/mbox>
@@ -421,11 +421,11 @@
       <http://www.w3.org/ns/earl#result>
               [ a       <http://www.w3.org/ns/earl#TestResult> ;
                 <http://purl.org/dc/elements/1.1/date>
-                        "2012-08-17T16:34:49"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                        "2012-08-25T10:58:37"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
                 <http://www.w3.org/ns/earl#outcome>
                         <http://www.w3.org/ns/earl#pass>
               ] ;
       <http://www.w3.org/ns/earl#subject>
               <http://mappingpedia.org/rdb2rdf/myProject/r2rml4net> ;
       <http://www.w3.org/ns/earl#test>
-              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0014> .
+              <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#DirectGraphTC0000> .
