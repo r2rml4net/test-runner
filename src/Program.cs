@@ -25,47 +25,50 @@ namespace TCode.r2rml4net.TestCasesRunner
 
         static void Main()
         {
-            _r2RMLLogWriter = new StreamWriter("r2rml.log");
-            _directLogWriter = new StreamWriter("direct.log");
-
-            string masterConnection = ConfigurationManager.ConnectionStrings["SqlServer2008Master"].ConnectionString;
-
-            string testDir = ConfigurationManager.AppSettings["testDir"];
-            foreach (var testCase in Directory.EnumerateDirectories(testDir, "D*"))
+            using (_r2RMLLogWriter = new StreamWriter("r2rml.log"))
             {
-                Console.Out.WriteLine("Test case {0}: ", testCase);
-
-                var dbProviderFactory = DbProviderFactories.GetFactory(ConfigurationManager.ConnectionStrings["SqlServer2008Master"].ProviderName);
-                using (IDbConnection connection = dbProviderFactory.CreateConnection())
+                using (_directLogWriter = new StreamWriter("direct.log"))
                 {
-                    if (connection != null)
+                    string masterConnection = ConfigurationManager.ConnectionStrings["SqlServer2008Master"].ConnectionString;
+
+                    string testDir = ConfigurationManager.AppSettings["testDir"];
+                    foreach (var testCase in Directory.EnumerateDirectories(testDir, "D*"))
                     {
-                        connection.ConnectionString = masterConnection;
-                        connection.Open();
-                        try
-                        {
-                            ExecuteCommand(connection, "if db_id('r2rml4net_tests') is not null DROP DATABASE r2rml4net_tests");
-                            ExecuteCommand(connection, "CREATE DATABASE r2rml4net_tests");
+                        Console.Out.WriteLine("Test case {0}: ", testCase);
 
-                            connection.ChangeDatabase("r2rml4net_tests");
+                        var dbProviderFactory = DbProviderFactories.GetFactory(ConfigurationManager.ConnectionStrings["SqlServer2008Master"].ProviderName);
+                        using (IDbConnection connection = dbProviderFactory.CreateConnection())
+                        {
+                            if (connection != null)
+                            {
+                                connection.ConnectionString = masterConnection;
+                                connection.Open();
+                                try
+                                {
+                                    ExecuteCommand(connection, "if db_id('r2rml4net_tests') is not null DROP DATABASE r2rml4net_tests");
+                                    ExecuteCommand(connection, "CREATE DATABASE r2rml4net_tests");
 
-                            ExecuteTests(connection, testCase);
+                                    connection.ChangeDatabase("r2rml4net_tests");
+
+                                    ExecuteTests(connection, testCase);
+                                }
+                                catch (SqlException ex)
+                                {
+                                    Console.WriteLine("FAIL");
+                                    Console.WriteLine(ex.Message);
+                                }
+                                finally
+                                {
+                                    connection.ChangeDatabase("master");
+                                    ExecuteCommand(connection, "ALTER DATABASE r2rml4net_tests SET SINGLE_USER WITH ROLLBACK IMMEDIATE");
+                                    ExecuteCommand(connection, "ALTER DATABASE r2rml4net_tests SET MULTI_USER");
+                                }
+                            }
                         }
-                        catch (SqlException ex)
-                        {
-                            Console.WriteLine("FAIL");
-                            Console.WriteLine(ex.Message);
-                        }
-                        finally
-                        {
-                            connection.ChangeDatabase("master");
-                            ExecuteCommand(connection, "ALTER DATABASE r2rml4net_tests SET SINGLE_USER WITH ROLLBACK IMMEDIATE");
-                            ExecuteCommand(connection, "ALTER DATABASE r2rml4net_tests SET MULTI_USER");
-                        }
+
+                        Console.WriteLine();
                     }
                 }
-
-                Console.WriteLine();
             }
         }
 
