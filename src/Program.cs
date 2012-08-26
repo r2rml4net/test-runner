@@ -131,7 +131,7 @@ namespace TCode.r2rml4net.TestCasesRunner
                 });
 
                 var mappings = new Func<IR2RML>(mappingGenerator.GenerateMappings);
-                GenerateTriples(mappings, directMappingOutputPath, connection, new RDFTermGenerator(true));
+                GenerateTriples(mappings, directMappingOutputPath, connection, new RDFTermGenerator(new MappingOptions{PreserveDuplicateRows = true}));
             }
         }
 
