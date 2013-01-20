@@ -14,6 +14,8 @@
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">.\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -36,10 +38,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DatabaseSchemaReader">
-      <HintPath>..\r2rml4net\bin\Release\DatabaseSchemaReader.dll</HintPath>
+      <HintPath>packages\r2rml.net-unstable.0.3.2.18\lib\net40\DatabaseSchemaReader.dll</HintPath>
     </Reference>
     <Reference Include="dotNetRDF">
-      <HintPath>..\r2rml4net\bin\Release\dotNetRDF.dll</HintPath>
+      <HintPath>packages\dotNetRDF.0.7.2\lib\net40\dotNetRDF.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>packages\HtmlAgilityPack.1.4.6\lib\Net40\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -50,10 +58,10 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="TCode.r2rml4net">
-      <HintPath>..\r2rml4net\bin\Release\TCode.r2rml4net.dll</HintPath>
+      <HintPath>packages\r2rml.net-unstable.0.3.2.18\lib\net40\TCode.r2rml4net.dll</HintPath>
     </Reference>
     <Reference Include="TCode.r2rml4net.Mapping">
-      <HintPath>..\r2rml4net\bin\Release\TCode.r2rml4net.Mapping.dll</HintPath>
+      <HintPath>packages\r2rml.net-unstable.0.3.2.18\lib\net40\TCode.r2rml4net.Mapping.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -63,8 +71,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
