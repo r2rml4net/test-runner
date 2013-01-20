@@ -23,15 +23,21 @@ namespace TCode.r2rml4net.TestCasesRunner
         private static StreamWriter _r2RMLLogWriter, _directLogWriter;
         private static TextWriterLog _log;
 
-        static void Main()
+        static int Main(params string[] args)
         {
+            if (!args.Any())
+            {
+                Console.Write("Missing test cases folder parameter");
+                return 1;
+            }
+
             using (_r2RMLLogWriter = new StreamWriter("r2rml.log"))
             {
                 using (_directLogWriter = new StreamWriter("direct.log"))
                 {
                     string masterConnection = ConfigurationManager.ConnectionStrings["SqlServer2008Master"].ConnectionString;
 
-                    string testDir = ConfigurationManager.AppSettings["testDir"];
+                    string testDir = args[0];
                     foreach (var testCase in Directory.EnumerateDirectories(testDir, "D*"))
                     {
                         Console.Out.WriteLine("Test case {0}: ", testCase);
@@ -54,8 +60,9 @@ namespace TCode.r2rml4net.TestCasesRunner
                                 }
                                 catch (SqlException ex)
                                 {
-                                    Console.WriteLine("FAIL");
-                                    Console.WriteLine(ex.Message);
+                                    Console.Out.WriteLine("FAIL");
+                                    Console.Out.WriteLine(ex.Message);
+                                    return 1;
                                 }
                                 finally
                                 {
@@ -70,6 +77,8 @@ namespace TCode.r2rml4net.TestCasesRunner
                     }
                 }
             }
+
+            return 0;
         }
 
         private static void ExecuteCommand(IDbConnection connection, string commandText)
