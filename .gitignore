@@ -1,6 +1,4 @@
-syntax: regexp
 [Bb]in
-syntax: glob
 [Oo]bj
 src/_ReSharper.TCode.r2rml4net.TestCasesRunner
 *.suo
