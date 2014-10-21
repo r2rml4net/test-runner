@@ -7,8 +7,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using DatabaseSchemaReader;
 using TCode.r2rml4net.Log;
-using TCode.r2rml4net.Mapping;
-using TCode.r2rml4net.Mapping.DirectMapping;
+using TCode.r2rml4net.Mapping.Fluent;
 using TCode.r2rml4net.RDB.DatabaseSchemaReader;
 using TCode.r2rml4net.TriplesGeneration;
 using VDS.RDF;
@@ -17,6 +16,7 @@ using System.Data;
 
 namespace TCode.r2rml4net.TestCasesRunner
 {
+
     class Program
     {
         static readonly IColumnTypeMapper ColumnTypeMapper = new MSSQLServerColumTypeMapper();
@@ -131,16 +131,11 @@ namespace TCode.r2rml4net.TestCasesRunner
             var connectionString = ConfigurationManager.ConnectionStrings["SqlServer2008Test"];
             using (var databaseReader = new DatabaseReader(connectionString.ConnectionString, connectionString.ProviderName))
             {
-                var r2RMLConfiguration = new R2RMLConfiguration(new Uri("http://example.com/base/"));
                 var metadataProvider = new DatabaseSchemaAdapter(databaseReader, ColumnTypeMapper);
-                var mappingGenerator = new R2RMLMappingGenerator(metadataProvider, r2RMLConfiguration, new MappingOptions
-                {
-                    IgnoreDataErrors = false,
-                    IgnoreMappingErrors = false
-                });
+                var mappingGenerator = new DirectR2RMLMapping(metadataProvider, new Uri("http://example.com/base/"));
 
-                var mappings = new Func<IR2RML>(mappingGenerator.GenerateMappings);
-                GenerateTriples(mappings, directMappingOutputPath, connection, new RDFTermGenerator(new MappingOptions{PreserveDuplicateRows = true}));
+                Func<IR2RML> mappings = () => mappingGenerator;
+                GenerateTriples(mappings, directMappingOutputPath, connection, new RDFTermGenerator());
             }
         }
 
@@ -151,15 +146,15 @@ namespace TCode.r2rml4net.TestCasesRunner
             IR2RMLProcessor processor;
             try
             {
-                processor = new W3CR2RMLProcessor(connection, termGen, new MappingOptions
-                    {
-                        IgnoreDataErrors = false,
-                        IgnoreMappingErrors = false
-                    })
+                processor = new W3CR2RMLProcessor(connection, termGen)
                     {
                         Log = _log
                     };
-                store = processor.GenerateTriples(createMappings());
+
+                using (new MappingScope(new MappingOptions().IgnoringDataErrors(false).IgnoringMappingErrors(false)))
+                {
+                    store = processor.GenerateTriples(createMappings());
+                }
             }
             catch (Exception ex)
             {
