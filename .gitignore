@@ -5,3 +5,4 @@ src/_ReSharper.TCode.r2rml4net.TestCasesRunner
 *.user
 src/packages/
 test-cases
+test harness/*.ttl
