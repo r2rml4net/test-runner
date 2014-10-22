@@ -26,14 +26,14 @@
 
             foreach (var result in results)
             {
-                Console.WriteLine("##teamcity[testStarted name=\"{0}\"]", result["test"]);
+                Console.WriteLine("##teamcity[testStarted name='{0}']", result["test"]);
 
                 if (((IUriNode)result["outcome"]).Uri.ToString() == "http://www.w3.org/ns/earl#fail")
                 {
-                    Console.WriteLine("##teamcity[testFailed name=\"{0}\"]", result["test"]);
+                    Console.WriteLine("##teamcity[testFailed name='{0}']", result["test"]);
                 }
 
-                Console.WriteLine("##teamcity[testFinished name=\"{0}\"]", result["test"]);
+                Console.WriteLine("##teamcity[testFinished name='{0}']", result["test"]);
             }
         }
     }
