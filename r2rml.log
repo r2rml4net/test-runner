@@ -1,0 +1,794 @@
+
+test-cases\D000-1table1column0rows\r2rml.ttl
+
+test-cases\D001-1table1column1row\r2rmla.ttl
+Generated term http://example.com/Venus
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Venus
+
+test-cases\D001-1table1column1row\r2rmlb.ttl
+Generated term _:autos28
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Venus
+
+test-cases\D002-1table2columns1row\r2rmla.ttl
+Generated term http://example.com/10/Venus
+Generated term http://example.com/id
+Generated term 10^^http://www.w3.org/2001/XMLSchema#integer
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Venus
+
+test-cases\D002-1table2columns1row\r2rmlb.ttl
+Generated term _:autos53
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Venus
+
+test-cases\D002-1table2columns1row\r2rmlc.ttl
+Generated term http://example.com/10/Venus
+Generated term http://example.com/id
+Column "IDs" not found
+Triples map http://example.com/base/TriplesMap1 was invalid: Column "IDs" not found
+
+test-cases\D002-1table2columns1row\r2rmld.ttl
+Generated term _:autos65
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Venus
+
+test-cases\D002-1table2columns1row\r2rmle.ttl
+Could not execute query for http://example.com/base/TriplesMap1: Invalid object name 'Students'.
+Triples map http://example.com/base/TriplesMap1 was invalid: Map http://example.com/base/TriplesMap1 is invalid. Error executing query:
+
+test-cases\D002-1table2columns1row\r2rmlf.ttl
+Generated term http://example.com/10/Venus
+Generated term http://example.com/id
+Generated term 10^^http://www.w3.org/2001/XMLSchema#integer
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Venus
+
+test-cases\D002-1table2columns1row\r2rmlg.ttl
+Could not execute query for http://example.com/base/TriplesMap1: Incorrect syntax near the keyword 'IS'.
+Triples map http://example.com/base/TriplesMap1 was invalid: Map http://example.com/base/TriplesMap1 is invalid. Error executing query:
+
+test-cases\D002-1table2columns1row\r2rmlh.ttl
+Triples map http://example.com/base/TriplesMap1 was invalid: Sql query contains duplicate names
+
+test-cases\D002-1table2columns1row\r2rmli.ttl
+Generated term http://example.com/10/Venus
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Venus
+
+test-cases\D002-1table2columns1row\r2rmlj.ttl
+Generated term http://example.com/10/Venus
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Venus
+
+test-cases\D003-1table3columns1row\r2rmla.ttl
+Triples map http://example.com/base/TriplesMap1 was invalid: Sql version http://www.w3.org/ns/r2rml#SQL1979 is invalid
+
+test-cases\D003-1table3columns1row\r2rmlb.ttl
+Generated term http://example.com/Student/10
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Venus Williams
+
+test-cases\D003-1table3columns1row\r2rmlc.ttl
+Generated term http://example.com/Student10
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Venus Williams
+
+test-cases\D004-1table2columns1row\r2rmla.ttl
+Generated term http://example.com/Venus
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Venus
+Generated term http://example.com/Tennis
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Tennis
+
+test-cases\D004-1table2columns1row\r2rmlb.ttl
+Term map _:autos149 was invalid: Cannot generate RDF term for '_:autos149'. Term map cannot be of term type literal
+
+test-cases\D005-1table3columns3rows2duplicates\r2rmla.ttl
+Generated term http://example.com/Bob;Smith
+Generated term http://example.com/owes
+Generated term 3.0E1^^http://www.w3.org/2001/XMLSchema#double
+Generated term http://example.com/Sue;Jones
+Generated term http://example.com/owes
+Generated term 2.0E1^^http://www.w3.org/2001/XMLSchema#double
+Generated term http://example.com/Bob;Smith
+Generated term http://example.com/owes
+Generated term 3.0E1^^http://www.w3.org/2001/XMLSchema#double
+
+test-cases\D005-1table3columns3rows2duplicates\r2rmlb.ttl
+Generated term _:autos184
+Generated term http://example.com/base/IOUs#fname
+Generated term Bob
+Generated term http://example.com/base/IOUs#lname
+Generated term Smith
+Generated term http://example.com/base/IOUs#amount
+Generated term 3.0E1^^http://www.w3.org/2001/XMLSchema#double
+Generated term _:autos186
+Generated term http://example.com/base/IOUs#fname
+Generated term Sue
+Generated term http://example.com/base/IOUs#lname
+Generated term Jones
+Generated term http://example.com/base/IOUs#amount
+Generated term 2.0E1^^http://www.w3.org/2001/XMLSchema#double
+Generated term _:autos184
+Generated term http://example.com/base/IOUs#fname
+Generated term Bob
+Generated term http://example.com/base/IOUs#lname
+Generated term Smith
+Generated term http://example.com/base/IOUs#amount
+Generated term 3.0E1^^http://www.w3.org/2001/XMLSchema#double
+
+test-cases\D006-1table1primarykey1column1row\r2rmla.ttl
+Generated term http://example.com/BadStudent
+Generated term http://example.com/graph/student
+Generated term http://example.com/description
+Generated term Bad Student
+
+test-cases\D007-1table1primarykey2columns1row\r2rmla.ttl
+Generated term http://example.com/Student/10/Venus
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://xmlns.com/foaf/0.1/Person
+
+test-cases\D007-1table1primarykey2columns1row\r2rmlb.ttl
+Generated term http://example.com/Student/10/Venus
+Generated term http://example.com/PersonGraph
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://xmlns.com/foaf/0.1/Person
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Venus
+
+test-cases\D007-1table1primarykey2columns1row\r2rmlc.ttl
+Generated term http://example.com/Student/10/Venus
+Generated term http://example.com/id
+Generated term 10^^http://www.w3.org/2001/XMLSchema#integer
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Venus
+
+test-cases\D007-1table1primarykey2columns1row\r2rmld.ttl
+Generated term http://example.com/Student/10/Venus
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://xmlns.com/foaf/0.1/Person
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://example.com/Student
+Generated term http://example.com/id
+Generated term 10^^http://www.w3.org/2001/XMLSchema#integer
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Venus
+
+test-cases\D007-1table1primarykey2columns1row\r2rmle.ttl
+Generated term http://example.com/Student/10/Venus
+Generated term http://example.com/PersonGraph
+Generated term http://example.com/id
+Generated term 10^^http://www.w3.org/2001/XMLSchema#integer
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Venus
+
+test-cases\D007-1table1primarykey2columns1row\r2rmlf.ttl
+Generated term http://example.com/Student/10/Venus
+Generated term http://example.com/PersonGraph
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://xmlns.com/foaf/0.1/Person
+Generated term http://example.com/id
+Generated term 10^^http://www.w3.org/2001/XMLSchema#integer
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Venus
+
+test-cases\D007-1table1primarykey2columns1row\r2rmlg.ttl
+Generated term http://example.com/Student/10/Venus
+Generated term http://www.w3.org/ns/r2rml#defaultGraph
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://xmlns.com/foaf/0.1/Person
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Venus
+
+test-cases\D007-1table1primarykey2columns1row\r2rmlh.ttl
+Generated term http://example.com/Student/10/Venus
+Term map _:autos275 was invalid: Cannot generate RDF term for '_:autos275'. Term map cannot be of term type literal
+
+test-cases\D008-1table1compositeprimarykey3columns1row\r2rmla.ttl
+Generated term http://example.com/Student/10/Venus%20Williams
+Generated term http://example.com/graph/Student/10/Venus%20Williams
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://xmlns.com/foaf/0.1/Person
+Generated term http://example.com/id
+Generated term 10^^http://www.w3.org/2001/XMLSchema#integer
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Venus Williams
+Generated term http://example.com/Sport
+Generated term Tennis
+
+test-cases\D008-1table1compositeprimarykey3columns1row\r2rmlb.ttl
+Generated term http://example.com/Tennis
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://example.com/activity/Sport
+Generated term http://example.com/Student/10/Venus%20Williams
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://xmlns.com/foaf/0.1/Person
+Generated term http://example.com/id
+Generated term 10^^http://www.w3.org/2001/XMLSchema#integer
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Venus Williams
+Generated term http://example.com/Sport
+Generated term http://example.com/Student/10/Venus%20Williams
+Generated term http://example.com/Tennis
+Generated term http://example.com/Sport
+
+test-cases\D008-1table1compositeprimarykey3columns1row\r2rmlc.ttl
+Generated term http://example.com/Student/10/Venus%20Williams
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term http://example.com/name
+Generated term Venus Williams
+
+test-cases\D009-2tables1primarykey1foreignkey\r2rmla.ttl
+Generated term http://example.com/resource/student_10
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Venus Williams
+Generated term http://example.com/ontology/practises
+Generated term http://example.com/resource/student_20
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Demi Moore
+Generated term http://example.com/ontology/practises
+Generated term http://example.com/resource/student_10
+Generated term http://example.com/resource/sport_100
+Generated term http://example.com/ontology/practises
+Generated term http://example.com/resource/sport_100
+Generated term http://www.w3.org/2000/01/rdf-schema#label
+Generated term Tennis
+
+test-cases\D009-2tables1primarykey1foreignkey\r2rmlb.ttl
+Generated term http://example.com/resource/student_10
+Generated term http://example.com/graph/students
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Venus Williams
+Generated term http://example.com/graph/students
+Generated term http://example.com/ontology/practises
+Generated term http://example.com/graph/practise
+Generated term http://example.com/resource/student_20
+Generated term http://example.com/graph/students
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Demi Moore
+Generated term http://example.com/graph/students
+Generated term http://example.com/ontology/practises
+Generated term http://example.com/graph/practise
+Generated term http://example.com/resource/student_10
+Generated term http://example.com/resource/sport_100
+Generated term http://example.com/graph/students
+Generated term http://example.com/graph/practise
+Generated term http://example.com/ontology/practises
+Generated term http://example.com/resource/sport_100
+Generated term http://example.com/graph/sports
+Generated term http://www.w3.org/2000/01/rdf-schema#label
+Generated term Tennis
+
+test-cases\D009-2tables1primarykey1foreignkey\r2rmlc.ttl
+Generated term http://example.com/resource/student_Demi%20Moore
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Demi Moore
+Generated term http://example.com/resource/student_Venus%20Williams
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Venus Williams
+
+test-cases\D009-2tables1primarykey1foreignkey\r2rmld.ttl
+Generated term http://example.com/resource/student_Demi%20Moore
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Demi Moore
+Generated term http://example.com/numSport
+Generated term 0^^http://www.w3.org/2001/XMLSchema#integer
+Generated term http://example.com/resource/student_Venus%20Williams
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Venus Williams
+Generated term http://example.com/numSport
+Generated term 1^^http://www.w3.org/2001/XMLSchema#integer
+
+test-cases\D010-1table1primarykey3colums3rows\r2rmla.ttl
+Generated term http://example.com/1
+Generated term http://example.com/name
+Generated term Bolivia, Plurinational State of
+Generated term http://example.com/2
+Generated term http://example.com/name
+Generated term Ireland
+Generated term http://example.com/3
+Generated term http://example.com/name
+Generated term Saint Martin (French part)
+
+test-cases\D010-1table1primarykey3colums3rows\r2rmlb.ttl
+Generated term http://example.com/1/Bolivia%2C%20Plurinational%20State%20of
+Generated term http://example.com/name
+Generated term Bolivia, Plurinational State of
+Generated term http://example.com/2/Ireland
+Generated term http://example.com/name
+Generated term Ireland
+Generated term http://example.com/3/Saint%20Martin%20%28French%20part%29
+Generated term http://example.com/name
+Generated term Saint Martin (French part)
+
+test-cases\D010-1table1primarykey3colums3rows\r2rmlc.ttl
+Generated term http://example.com/1/Bolivia%2C%20Plurinational%20State%20of
+Generated term http://example.com/code
+Generated term {{{ BO }}}
+Generated term http://example.com/2/Ireland
+Generated term http://example.com/code
+Generated term {{{ IE }}}
+Generated term http://example.com/3/Saint%20Martin%20%28French%20part%29
+Generated term http://example.com/code
+Generated term {{{ MF }}}
+
+test-cases\D011-M2MRelations\r2rmla.ttl
+Generated term http://example.com/10/Venus;Williams
+Generated term http://example.com/id
+Generated term 10^^http://www.w3.org/2001/XMLSchema#integer
+Generated term http://example.com/firstName
+Generated term Venus
+Generated term http://example.com/lastName
+Generated term Williams
+Generated term http://example.com/plays
+Generated term http://example.com/110/Tennis
+Generated term http://example.com/11/Fernando;Alonso
+Generated term http://example.com/id
+Generated term 11^^http://www.w3.org/2001/XMLSchema#integer
+Generated term http://example.com/firstName
+Generated term Fernando
+Generated term http://example.com/lastName
+Generated term Alonso
+Generated term http://example.com/plays
+Generated term http://example.com/111/Football
+Generated term http://example.com/11/Fernando;Alonso
+Generated term http://example.com/id
+Generated term 11^^http://www.w3.org/2001/XMLSchema#integer
+Generated term http://example.com/firstName
+Generated term Fernando
+Generated term http://example.com/lastName
+Generated term Alonso
+Generated term http://example.com/plays
+Generated term http://example.com/112/Formula1
+Generated term http://example.com/12/David;Villa
+Generated term http://example.com/id
+Generated term 12^^http://www.w3.org/2001/XMLSchema#integer
+Generated term http://example.com/firstName
+Generated term David
+Generated term http://example.com/lastName
+Generated term Villa
+Generated term http://example.com/plays
+Generated term http://example.com/111/Football
+Generated term http://example.com/110/Tennis
+Generated term http://example.com/id
+Generated term 110^^http://www.w3.org/2001/XMLSchema#integer
+Generated term http://example.com/description
+Generated term Tennis
+Generated term http://example.com/111/Football
+Generated term http://example.com/id
+Generated term 111^^http://www.w3.org/2001/XMLSchema#integer
+Generated term http://example.com/description
+Generated term Football
+Generated term http://example.com/112/Formula1
+Generated term http://example.com/id
+Generated term 112^^http://www.w3.org/2001/XMLSchema#integer
+Generated term http://example.com/description
+Generated term Formula1
+
+test-cases\D011-M2MRelations\r2rmlb.ttl
+Generated term http://example.com/student/10
+Generated term http://example.com/firstName
+Generated term Venus
+Generated term http://example.com/lastName
+Generated term Williams
+Generated term http://example.com/student/11
+Generated term http://example.com/firstName
+Generated term Fernando
+Generated term http://example.com/lastName
+Generated term Alonso
+Generated term http://example.com/student/12
+Generated term http://example.com/firstName
+Generated term David
+Generated term http://example.com/lastName
+Generated term Villa
+Generated term http://example.com/sport/110
+Generated term http://example.com/id
+Generated term 110^^http://www.w3.org/2001/XMLSchema#integer
+Generated term http://example.com/description
+Generated term Tennis
+Generated term http://example.com/sport/111
+Generated term http://example.com/id
+Generated term 111^^http://www.w3.org/2001/XMLSchema#integer
+Generated term http://example.com/description
+Generated term Football
+Generated term http://example.com/sport/112
+Generated term http://example.com/id
+Generated term 112^^http://www.w3.org/2001/XMLSchema#integer
+Generated term http://example.com/description
+Generated term Formula1
+Generated term http://example.com/student/10
+Generated term http://example.com/plays
+Generated term http://example.com/sport/110
+Generated term http://example.com/student/11
+Generated term http://example.com/plays
+Generated term http://example.com/sport/111
+Generated term http://example.com/student/11
+Generated term http://example.com/plays
+Generated term http://example.com/sport/112
+Generated term http://example.com/student/12
+Generated term http://example.com/plays
+Generated term http://example.com/sport/111
+
+test-cases\D012-2tables2duplicates0nulls\r2rmla.ttl
+Generated term _:autos539
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Bob Smith
+Generated term http://example.com/amount
+Generated term 3.0E1^^http://www.w3.org/2001/XMLSchema#double
+Generated term _:autos541
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Sue Jones
+Generated term http://example.com/amount
+Generated term 2.0E1^^http://www.w3.org/2001/XMLSchema#double
+Generated term _:autos539
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Bob Smith
+Generated term http://example.com/amount
+Generated term 3.0E1^^http://www.w3.org/2001/XMLSchema#double
+
+test-cases\D012-2tables2duplicates0nulls\r2rmlb.ttl
+Generated term _:autos553
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Bob Smith
+Generated term _:autos555
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Sue Jones
+Generated term _:autos553
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Bob Smith
+Generated term _:autos553
+Generated term http://example.com/city
+Generated term London
+Generated term _:autos555
+Generated term http://example.com/city
+Generated term Madrid
+Generated term _:autos553
+Generated term http://example.com/city
+Generated term London
+
+test-cases\D012-2tables2duplicates0nulls\r2rmlc.ttl
+Term map _:autos564 was invalid: Cannot generate RDF term for '_:autos564'. Term map must be either constant, column or template valued
+
+test-cases\D012-2tables2duplicates0nulls\r2rmld.ttl
+
+test-cases\D012-2tables2duplicates0nulls\r2rmle.ttl
+Generated term _:autos599
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://example.com/base/IOUs
+Generated term http://example.com/base/IOUs#fname
+Generated term Bob
+Generated term http://example.com/base/IOUs#lname
+Generated term Smith
+Generated term http://example.com/base/IOUs#amount
+Generated term 3.0E1^^http://www.w3.org/2001/XMLSchema#double
+Generated term _:autos601
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://example.com/base/IOUs
+Generated term http://example.com/base/IOUs#fname
+Generated term Sue
+Generated term http://example.com/base/IOUs#lname
+Generated term Jones
+Generated term http://example.com/base/IOUs#amount
+Generated term 2.0E1^^http://www.w3.org/2001/XMLSchema#double
+Generated term _:autos599
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://example.com/base/IOUs
+Generated term http://example.com/base/IOUs#fname
+Generated term Bob
+Generated term http://example.com/base/IOUs#lname
+Generated term Smith
+Generated term http://example.com/base/IOUs#amount
+Generated term 3.0E1^^http://www.w3.org/2001/XMLSchema#double
+Generated term _:autos603
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://example.com/base/Lives
+Generated term http://example.com/base/IOUs#fname
+Generated term Bob
+Generated term http://example.com/base/IOUs#lname
+Generated term Smith
+Generated term http://example.com/base/IOUs#city
+Generated term London
+Generated term _:autos605
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://example.com/base/Lives
+Generated term http://example.com/base/IOUs#fname
+Generated term Sue
+Generated term http://example.com/base/IOUs#lname
+Generated term Jones
+Generated term http://example.com/base/IOUs#city
+Generated term Madrid
+Generated term _:autos603
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://example.com/base/Lives
+Generated term http://example.com/base/IOUs#fname
+Generated term Bob
+Generated term http://example.com/base/IOUs#lname
+Generated term Smith
+Generated term http://example.com/base/IOUs#city
+Generated term London
+
+test-cases\D013-1table1primarykey3columns2rows1nullvalue\r2rmla.ttl
+Term map _:autos619 produced null term
+Generated term http://example.com/BirthDay
+Term map _:autos621 produced null term
+Generated term http://example.com/Person/2/Bob/September%2C%202010
+Generated term http://example.com/BirthDay
+Generated term September, 2010
+
+test-cases\D014-3tables1primarykey1foreignkey\r2rmla.ttl
+Generated term _:autos676
+Generated term http://example.com/dept#location
+Generated term NEW YORK
+
+test-cases\D014-3tables1primarykey1foreignkey\r2rmlb.ttl
+Generated term _:autos725
+Generated term http://example.com/dept#deptno
+Generated term 10^^http://www.w3.org/2001/XMLSchema#integer
+Generated term http://example.com/dept#name
+Generated term APPSERVER
+Generated term http://example.com/dept#location
+Generated term NEW YORK
+Generated term http://example.com/dept#COMPANY
+Generated term EXAMPLE Corporation
+Generated term http://example.com/emp/7369
+Generated term http://example.com/emp#jobtype
+Generated term http://example.com/emp/job/CLERK
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://example.com/emp/job/CLERK
+Generated term http://example.com/emp#emptype
+Generated term http://example.com/emp/etype/PART_TIME
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://example.com/emp/etype/PART_TIME
+Generated term http://example.com/emp#empno
+Generated term 7369^^http://www.w3.org/2001/XMLSchema#integer
+Generated term http://example.com/emp#name
+Generated term SMITH
+Generated term http://example.com/emp#job
+Generated term CLERK
+Generated term http://example.com/emp#deptNum
+Generated term 10^^http://www.w3.org/2001/XMLSchema#integer
+Generated term http://example.com/emp#etype
+Generated term PART_TIME
+Generated term http://example.com/emp#c_ref_deptno
+Generated term http://example.com/emp/7369
+Generated term _:autos725
+Generated term http://example.com/emp#c_ref_deptno
+
+test-cases\D014-3tables1primarykey1foreignkey\r2rmlc.ttl
+Generated term _:autos770
+Generated term http://example.com/dept#deptno
+Generated term 10^^http://www.w3.org/2001/XMLSchema#positiveInteger
+Generated term http://example.com/dept#name
+Generated term APPSERVER
+Generated term http://example.com/dept#location
+Generated term NEW YORK
+Generated term http://example.com/dept#COMPANY
+Generated term EXAMPLE Corporation
+Generated term http://example.com/emp/7369
+Generated term http://example.com/emp#jobtype
+Generated term http://example.com/emp/job/CLERK
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://example.com/emp/job/CLERK
+Generated term http://example.com/emp#emptype
+Generated term http://example.com/emp/etype/PART_TIME
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://example.com/emp/etype/PART_TIME
+Generated term http://example.com/emp#empno
+Generated term 7369^^http://www.w3.org/2001/XMLSchema#integer
+Generated term http://example.com/emp#name
+Generated term SMITH
+Generated term http://example.com/emp#job
+Generated term CLERK
+Generated term http://example.com/emp#deptNum
+Generated term 10^^http://www.w3.org/2001/XMLSchema#integer
+Generated term http://example.com/emp#etype
+Generated term PART_TIME
+Generated term http://example.com/emp#c_ref_deptno
+Generated term http://example.com/emp/7369
+Generated term _:autos770
+Generated term http://example.com/emp#c_ref_deptno
+
+test-cases\D014-3tables1primarykey1foreignkey\r2rmld.ttl
+Generated term http://data.example.com/employee/7369
+Generated term http://example.com/ns#role
+Generated term http://data.example.com/roles/general-office
+
+test-cases\D015-1table3columns1composityeprimarykey3rows2languages\r2rmla.ttl
+Generated term http://example.com/BO
+Generated term http://www.w3.org/2000/01/rdf-schema#label
+Generated term Bolivia, Plurinational State of@en
+Generated term http://example.com/IE
+Generated term http://www.w3.org/2000/01/rdf-schema#label
+Generated term Ireland@en
+Generated term http://example.com/BO
+Generated term http://www.w3.org/2000/01/rdf-schema#label
+Generated term Estado Plurinacional de Bolivia@es
+Generated term http://example.com/IE
+Generated term http://www.w3.org/2000/01/rdf-schema#label
+Generated term Irlanda@es
+
+test-cases\D015-1table3columns1composityeprimarykey3rows2languages\r2rmlb.ttl
+Generated term http://example.com/BO
+Generated term http://www.w3.org/2000/01/rdf-schema#label
+Term map _:autos801 was invalid: Cannot generate RDF term for '_:autos801'. Language tag 'english' is invalid
+
+test-cases\D016-1table1primarykey10columns3rowsSQLdatatypes\r2rmla.ttl
+Generated term http://example.com/Patient/10
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://xmlns.com/foaf/0.1/Person
+Generated term http://example.com/id
+Generated term 10^^http://www.w3.org/2001/XMLSchema#integer
+Generated term http://example.com/firstName
+Generated term Monica
+Generated term http://example.com/lastName
+Generated term Geller
+Generated term http://example.com/gender
+Generated term female
+Generated term http://example.com/Patient/11
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://xmlns.com/foaf/0.1/Person
+Generated term http://example.com/id
+Generated term 11^^http://www.w3.org/2001/XMLSchema#integer
+Generated term http://example.com/firstName
+Generated term Rachel
+Generated term http://example.com/lastName
+Generated term Green
+Generated term http://example.com/gender
+Generated term female
+Generated term http://example.com/Patient/12
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://xmlns.com/foaf/0.1/Person
+Generated term http://example.com/id
+Generated term 12^^http://www.w3.org/2001/XMLSchema#integer
+Generated term http://example.com/firstName
+Generated term Chandler
+Generated term http://example.com/lastName
+Generated term Bing
+Generated term http://example.com/gender
+Generated term male
+
+test-cases\D016-1table1primarykey10columns3rowsSQLdatatypes\r2rmlb.ttl
+Generated term http://example.com/Patient10
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://xmlns.com/foaf/0.1/Person
+Generated term http://example.com/weight
+Generated term 8.025E1^^http://www.w3.org/2001/XMLSchema#double
+Generated term http://example.com/height
+Generated term 1.65E0^^http://www.w3.org/2001/XMLSchema#double
+Generated term http://example.com/Patient11
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://xmlns.com/foaf/0.1/Person
+Generated term http://example.com/weight
+Generated term 7.022E1^^http://www.w3.org/2001/XMLSchema#double
+Generated term http://example.com/height
+Generated term 1.7E0^^http://www.w3.org/2001/XMLSchema#double
+Generated term http://example.com/Patient12
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://xmlns.com/foaf/0.1/Person
+Generated term http://example.com/weight
+Generated term 9.031E1^^http://www.w3.org/2001/XMLSchema#double
+Generated term http://example.com/height
+Generated term 1.76E0^^http://www.w3.org/2001/XMLSchema#double
+
+test-cases\D016-1table1primarykey10columns3rowsSQLdatatypes\r2rmlc.ttl
+Generated term http://example.com/Patient10
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://xmlns.com/foaf/0.1/Person
+Generated term http://example.com/birthdate
+Generated term 1981-10-10^^http://www.w3.org/2001/XMLSchema#date
+Generated term http://example.com/entrancedate
+Generated term 2009-10-10T12:12:22^^http://www.w3.org/2001/XMLSchema#dateTime
+Generated term http://example.com/Patient11
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://xmlns.com/foaf/0.1/Person
+Generated term http://example.com/birthdate
+Generated term 1982-11-12^^http://www.w3.org/2001/XMLSchema#date
+Generated term http://example.com/entrancedate
+Generated term 2008-11-12T09:45:44^^http://www.w3.org/2001/XMLSchema#dateTime
+Generated term http://example.com/Patient12
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://xmlns.com/foaf/0.1/Person
+Generated term http://example.com/birthdate
+Generated term 1978-04-06^^http://www.w3.org/2001/XMLSchema#date
+Generated term http://example.com/entrancedate
+Generated term 2007-03-12T02:13:14^^http://www.w3.org/2001/XMLSchema#dateTime
+
+test-cases\D016-1table1primarykey10columns3rowsSQLdatatypes\r2rmld.ttl
+Generated term http://example.com/Patient10
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://xmlns.com/foaf/0.1/Person
+Generated term http://example.com/paid
+Generated term false^^http://www.w3.org/2001/XMLSchema#boolean
+Generated term http://example.com/Patient11
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://xmlns.com/foaf/0.1/Person
+Generated term http://example.com/paid
+Generated term true^^http://www.w3.org/2001/XMLSchema#boolean
+Generated term http://example.com/Patient12
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://xmlns.com/foaf/0.1/Person
+Generated term http://example.com/paid
+Generated term true^^http://www.w3.org/2001/XMLSchema#boolean
+
+test-cases\D016-1table1primarykey10columns3rowsSQLdatatypes\r2rmle.ttl
+Generated term http://example.com/Patient10
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://xmlns.com/foaf/0.1/Person
+Generated term http://example.com/photo
+Generated term data:image/png;hex,89504E470D0A1A0A0000000D49484452000000050000000508060000008D6F26E50000001C4944415408D763F9FFFEBFC37F062005C3201284D031F18258CD04000EF535CBD18E0E1F0000000049454E44AE426082
+Generated term http://example.com/Patient11
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://xmlns.com/foaf/0.1/Person
+Generated term http://example.com/photo
+Generated term data:image/png;hex,89504E470D0A1A0A0000000D49484452000000050000000508060000008D6F26E50000001C4944415408D763F9FFFF3FC37F062005C3201284D031F18258CD04000EF535CBD18E0E1F0000000049454E44AE426082
+Generated term http://example.com/Patient12
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://xmlns.com/foaf/0.1/Person
+Generated term http://example.com/photo
+Generated term data:image/png;hex,89504E470D0A1A0A0000000D49484452000000050000000508060000008D6F26E50000001C4944415408D763F9FFFEBFC37F062005C3201284D031F18258CD04000EF535CBD18E0E1F0000000049454E44AE426082
+
+test-cases\D018-1table1primarykey2columns3rows\r2rmla.ttl
+Generated term http://example.com/10
+Generated term http://example.com/id
+Generated term 10^^http://www.w3.org/2001/XMLSchema#integer
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Venus          
+Generated term http://example.com/20
+Generated term http://example.com/id
+Generated term 20^^http://www.w3.org/2001/XMLSchema#integer
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Fernando       
+Generated term http://example.com/30
+Generated term http://example.com/id
+Generated term 30^^http://www.w3.org/2001/XMLSchema#integer
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term David          
+
+test-cases\D019-1table1primarykey3columns3rows\r2rmla.ttl
+Generated term http://example.com/ns#Jhon
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term http://example.com/ns#Jhon
+Generated term http://example.com/base/Carlos
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Carlos
+
+test-cases\D019-1table1primarykey3columns3rows\r2rmlb.ttl
+Generated term http://example.com/ns#Jhon
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term http://example.com/ns#Jhon
+Generated term http://example.com/base/Carlos
+Generated term http://xmlns.com/foaf/0.1/name
+Generated term Carlos
+Term map _:autos967 was invalid: Cannot generate RDF term for '_:autos967'. Column value is not escaped and thus cannot contain these disallowed characters: ' '
+
+test-cases\D020-1table1column5rows\r2rmla.ttl
+Generated term http://example.com/base/http%3A%2F%2Fexample.com%2Fcompany%2FAlice
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://xmlns.com/foaf/0.1/Person
+Generated term http://example.com/base/Bob
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://xmlns.com/foaf/0.1/Person
+Generated term http://example.com/base/Bob%2FCharles
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://xmlns.com/foaf/0.1/Person
+Generated term http://example.com/base/path%2F..%2FDanny
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://xmlns.com/foaf/0.1/Person
+Generated term http://example.com/base/Emily%20Smith
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://xmlns.com/foaf/0.1/Person
+
+test-cases\D020-1table1column5rows\r2rmlb.ttl
+Generated term http://example.com/company/Alice
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://xmlns.com/foaf/0.1/Person
+Generated term http://example.com/base/Bob
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://xmlns.com/foaf/0.1/Person
+Generated term http://example.com/base/Bob/Charles
+Generated term http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+Generated term http://xmlns.com/foaf/0.1/Person
+Term map _:autos992 was invalid: Cannot generate RDF term for '_:autos992'. The relative IRI cannot contain any . or .. parts

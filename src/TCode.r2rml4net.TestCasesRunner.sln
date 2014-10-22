@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCode.r2rml4net.TestCasesRunner", "TCode.r2rml4net.TestCasesRunner.csproj", "{14EAA5E8-13F9-4AD9-9B38-4E5786373B7A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCode.r2rml4net.TestCasesRunner", "TCode.r2rml4net.TestCasesRunner\TCode.r2rml4net.TestCasesRunner.csproj", "{14EAA5E8-13F9-4AD9-9B38-4E5786373B7A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCode.r2rml4net.TeamCityReporter", "TCode.r2rml4net.TeamCityReporter\TCode.r2rml4net.TeamCityReporter.csproj", "{0A3F8B07-E146-4F8A-B4D5-AD427017ADA8}"
 EndProject
