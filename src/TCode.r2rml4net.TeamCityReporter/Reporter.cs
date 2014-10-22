@@ -11,6 +11,8 @@
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("##teamcity[testSuiteStarted name='{0}']", args[0]);
+
             var store = new TripleStore();
             store.LoadFromFile(args[0]);
 
@@ -35,6 +37,8 @@
 
                 Console.WriteLine("##teamcity[testFinished name='{0}']", result["test"]);
             }
+
+            Console.WriteLine("##teamcity[testSuiteFinished name='{0}']", args[0]);
         }
     }
 }
