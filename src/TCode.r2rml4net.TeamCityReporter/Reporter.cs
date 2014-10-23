@@ -39,7 +39,7 @@
 
             foreach (var result in results)
             {
-                Console.WriteLine("##teamcity[testStarted name='{0}']", result["test"]);
+                Console.WriteLine("##teamcity[testStarted name='{0}' captureStandardOutput='true']", result["test"]);
 
                 PrintTestOutput(result["test"].ToString());
 
