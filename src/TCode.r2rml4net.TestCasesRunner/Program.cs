@@ -105,7 +105,11 @@ namespace TCode.r2rml4net.TestCasesRunner
             LogTo.Info("R2RML: ");
 
             var mappings = new Func<IR2RML>(() => R2RMLLoader.Load(File.OpenRead(inputMappingPath)));
-            GenerateTriples(mappings, outputDatasetPath, connection, new RDFTermGenerator());
+
+            using (new MappingScope(new MappingOptions().IgnoringDataErrors(false).IgnoringMappingErrors(false)))
+            {
+                GenerateTriples(mappings, outputDatasetPath, connection, new RDFTermGenerator());
+            }
         }
 
         private static void ExecuteDirectMappingTest(IDbConnection connection, string directMappingOutputPath)
@@ -117,9 +121,12 @@ namespace TCode.r2rml4net.TestCasesRunner
             {
                 var metadataProvider = new DatabaseSchemaAdapter(databaseReader, ColumnTypeMapper);
                 var mappingGenerator = new DirectR2RMLMapping(metadataProvider, new Uri("http://example.com/base/"));
-
-                Func<IR2RML> mappings = () => mappingGenerator;
-                GenerateTriples(mappings, directMappingOutputPath, connection, new RDFTermGenerator());
+               
+                using (new MappingScope(new MappingOptions().IgnoringDataErrors(false).IgnoringMappingErrors(false).WithDuplicateRowsPreserved(true)))
+                {
+                    Func<IR2RML> mappings = () => mappingGenerator;
+                    GenerateTriples(mappings, directMappingOutputPath, connection, new RDFTermGenerator());
+                }
             }
         }
 
@@ -131,11 +138,7 @@ namespace TCode.r2rml4net.TestCasesRunner
             try
             {
                 processor = new W3CR2RMLProcessor(connection, termGen);
-
-                using (new MappingScope(new MappingOptions().IgnoringDataErrors(false).IgnoringMappingErrors(false)))
-                {
-                    store = processor.GenerateTriples(createMappings());
-                }
+                store = processor.GenerateTriples(createMappings());
             }
             catch (Exception ex)
             {
