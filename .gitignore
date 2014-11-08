@@ -6,3 +6,4 @@ src/_ReSharper.TCode.r2rml4net.TestCasesRunner
 src/packages/
 test-cases
 test harness/*.ttl
+*.log
