@@ -8,16 +8,18 @@
     {
         private static int Main(string[] args)
         {
-            var options = new Options();
-            var parseSuccess = Parser.Default.ParseArguments(args, options);
+            var parseSuccess = Parser.Default.ParseArguments<Options>(args);
 
-            if (!parseSuccess)
+            if (parseSuccess.Tag == ParserResultType.NotParsed)
             {
                 Console.WriteLine("Invalid args");
                 return 1;
             }
 
-            new Reporter(options).ProcessResults();
+            parseSuccess.WithParsed(options =>
+            {
+                new Reporter(options).ProcessResults();
+            });
 
             return 0;
         }

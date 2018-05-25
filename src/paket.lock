@@ -1,0 +1,25 @@
+CONTENT: NONE
+RESTRICTION: == net452
+NUGET
+  remote: https://api.nuget.org/v3/index.json
+    Anotar.NLog.Fody (4.4)
+      Fody (>= 3.0.3)
+      NLog (>= 4.5.2)
+    CommandLineParser (2.2.1)
+    DatabaseSchemaReader (2.5.1)
+    dotNetRDF (2.0.1)
+      HtmlAgilityPack (>= 1.6)
+      Newtonsoft.Json (>= 10.0.3)
+      VDS.Common (>= 1.9)
+    Fody (3.0.3)
+    HtmlAgilityPack (1.8.2)
+    Newtonsoft.Json (11.0.2)
+    NLog (4.5.5)
+    NLog.Config (4.5.5)
+      NLog (>= 4.5.5)
+      NLog.Schema (>= 4.5.5)
+    NLog.Schema (4.5.5)
+    r2rml4net (0.4.0-pre01)
+      DatabaseSchemaReader (>= 1.2.8)
+      dotNetRDF (>= 1.0)
+    VDS.Common (1.10)
