@@ -1,0 +1,17 @@
+source https://api.nuget.org/v3/index.json
+
+content: none
+framework: net452
+
+nuget CommandLineParser
+nuget DatabaseSchemaReader
+nuget dotNetRDF
+nuget Fody 
+nuget HtmlAgilityPack
+nuget Newtonsoft.Json
+nuget NLog
+nuget NLog.Config
+nuget NLog.Schema 
+nuget r2rml4net prerelease
+nuget VDS.Common
+nuget Anotar.NLog.Fody

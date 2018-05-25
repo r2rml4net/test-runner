@@ -7,3 +7,5 @@ src/packages/
 test-cases
 test harness/*.ttl
 *.log
+/src/.paket/paket.exe
+.vs/

@@ -1,6 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{08C6B777-5F16-4845-8B63-EB8E96898FA5}"
+	ProjectSection(SolutionItems) = preProject
+		paket.dependencies = paket.dependencies
+		paket.lock = paket.lock
+	EndProjectSection
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCode.r2rml4net.TestCasesRunner", "TCode.r2rml4net.TestCasesRunner\TCode.r2rml4net.TestCasesRunner.csproj", "{14EAA5E8-13F9-4AD9-9B38-4E5786373B7A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCode.r2rml4net.TeamCityReporter", "TCode.r2rml4net.TeamCityReporter\TCode.r2rml4net.TeamCityReporter.csproj", "{0A3F8B07-E146-4F8A-B4D5-AD427017ADA8}"
@@ -38,5 +46,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {25404B0A-DBDA-44F9-85F0-8DDEFEC46C8A}
 	EndGlobalSection
 EndGlobal
