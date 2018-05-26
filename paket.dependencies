@@ -2,6 +2,7 @@ source https://api.nuget.org/v3/index.json
 
 content: none
 framework: net452, net462
+redirects: on
 
 nuget CommandLineParser
 nuget NLog.Config
