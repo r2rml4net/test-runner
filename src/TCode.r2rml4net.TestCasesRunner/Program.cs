@@ -76,7 +76,7 @@ namespace TCode.r2rml4net.TestCasesRunner
 
         private static void ExecuteR2RMLTest(IDbConnection connection, string inputMappingPath, string outputDatasetPath)
         {
-            LogTo.Info("R2RML: ");
+            LogTo.Debug("R2RML: ");
 
             var mappings = new Func<IR2RML>(() => R2RMLLoader.Load(File.OpenRead(inputMappingPath)));
 
@@ -88,7 +88,7 @@ namespace TCode.r2rml4net.TestCasesRunner
 
         private static void ExecuteDirectMappingTest(DbConnection connection, string directMappingOutputPath)
         {
-            LogTo.Info("DIRECT: ");
+            LogTo.Debug("DIRECT: ");
 
             using (var databaseReader = new DatabaseReader(connection))
             {
@@ -122,11 +122,11 @@ namespace TCode.r2rml4net.TestCasesRunner
             if (processor.Success)
             {
                 store.SaveToFile(outPath, new NQuadsWriter());
-                LogTo.Info("SUCCESS! {0} triples generated", store.Triples.Count());
+                LogTo.Debug("SUCCESS! {0} triples generated", store.Triples.Count());
             }
             else
             {
-                LogTo.Info("SUCCESS! No dataset generated");
+                LogTo.Debug("SUCCESS! No dataset generated");
             }
         }
     }
