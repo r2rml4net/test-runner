@@ -54,7 +54,10 @@ namespace TCode.r2rml4net.TestsCases
         {
             _output.WriteLine(testCase.Id);
 
-            PrintTestOutput(testCase.Id);
+            if (!testCase.Success)
+            {
+                PrintTestOutput(testCase.Id);
+            }
 
             Assert.True(testCase.Success);
         }
@@ -65,7 +68,10 @@ namespace TCode.r2rml4net.TestsCases
         {
             _output.WriteLine(testCase.Id);
 
-            PrintTestOutput(testCase.Id);
+            if (!testCase.Success)
+            {
+                PrintTestOutput(testCase.Id);
+            }
 
             Assert.True(testCase.Success);
         }
