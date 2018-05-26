@@ -32,7 +32,7 @@ namespace TCode.r2rml4net.TestCasesRunner
             string testDir = args[0];
             foreach (var testCase in Directory.EnumerateDirectories(testDir, "D*"))
             {
-                LogTo.Info("Test case {0}: ", testCase);
+                LogTo.Info("Test case {0}", testCase);
 
                 using (var database = new LocalDatabase())
                 {
