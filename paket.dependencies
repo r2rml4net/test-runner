@@ -1,7 +1,7 @@
 source https://api.nuget.org/v3/index.json
 
 content: none
-framework: auto-detect
+framework: net452, net462
 
 nuget CommandLineParser
 nuget NLog.Config
