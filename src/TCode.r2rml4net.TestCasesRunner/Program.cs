@@ -1,4 +1,4 @@
-﻿using System.Configuration;
+﻿using System;
 using System.Data.Common;
 using System.Data.SqlClient;
 using System.IO;
@@ -11,17 +11,15 @@ using TCode.r2rml4net.TriplesGeneration;
 using VDS.RDF;
 using VDS.RDF.Writing;
 using System.Data;
+using NLog;
 using SqlLocalDb;
 
 namespace TCode.r2rml4net.TestCasesRunner
 {
-    using System;
-
-    using Anotar.NLog;
-
     class Program
     {
         static readonly IColumnTypeMapper ColumnTypeMapper = new MSSQLServerColumTypeMapper();
+        private static readonly Logger LogTo = LogManager.GetCurrentClassLogger();
 
         static int Main(params string[] args)
         {

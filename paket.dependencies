@@ -6,7 +6,6 @@ framework: net452, net462
 nuget CommandLineParser
 nuget NLog.Config
 nuget r2rml4net prerelease
-nuget Anotar.NLog.Fody
 nuget SqlLocalDb
 nuget xunit
 
