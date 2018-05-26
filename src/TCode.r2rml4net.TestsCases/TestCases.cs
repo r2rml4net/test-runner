@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -20,28 +19,6 @@ namespace TCode.r2rml4net.TestsCases
         private readonly ITestOutputHelper _output;
         private static readonly Regex TestRegex = new Regex(@"^http://www.w3.org/2001/sw/rdb2rdf/test-cases/#(?<type>\w+)TC(?<number>\d+?)(?<variant>[a-z]?)$");
         private const string CasesPath = @"..\..\..\..\paket-files\r2rml4net\test-cases";
-
-        static TestCases()
-        {
-            var path = Path.Combine(Environment.CurrentDirectory, @"..\..\..\..\test harness\");
-            path = Path.GetFullPath(path);
-
-            var process = new Process
-            {
-                StartInfo = new ProcessStartInfo($"{path}rdb2rdf-th.bat", "ts.ttl")
-                {
-                    RedirectStandardOutput = true,
-                    WorkingDirectory = path,
-                    CreateNoWindow = true,
-                    UseShellExecute = false
-                },
-            };
-
-            process.Start();
-            process.WaitForExit();
-
-            Console.WriteLine(process.StandardOutput.ReadToEnd());
-        }
 
         public TestCases(ITestOutputHelper output)
         {
