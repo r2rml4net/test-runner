@@ -8,3 +8,4 @@ NLog.Schema
 r2rml4net
 VDS.Common
 Anotar.NLog.Fody
+SqlLocalDb

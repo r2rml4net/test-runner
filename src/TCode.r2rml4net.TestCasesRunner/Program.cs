@@ -11,6 +11,7 @@ using TCode.r2rml4net.TriplesGeneration;
 using VDS.RDF;
 using VDS.RDF.Writing;
 using System.Data;
+using SqlLocalDb;
 
 namespace TCode.r2rml4net.TestCasesRunner
 {
@@ -30,27 +31,18 @@ namespace TCode.r2rml4net.TestCasesRunner
                 return 1;
             }
 
-            string masterConnection = ConfigurationManager.ConnectionStrings["SqlServer2008Master"].ConnectionString;
-
-            string testDir = args[0];
-            foreach (var testCase in Directory.EnumerateDirectories(testDir, "D*"))
+            using (var database = new LocalDatabase())
             {
-                LogTo.Info("Test case {0}: ", testCase);
-
-                var dbProviderFactory = DbProviderFactories.GetFactory(ConfigurationManager.ConnectionStrings["SqlServer2008Master"].ProviderName);
-                using (IDbConnection connection = dbProviderFactory.CreateConnection())
+                string testDir = args[0];
+                foreach (var testCase in Directory.EnumerateDirectories(testDir, "D*"))
                 {
-                    if (connection != null)
+                    LogTo.Info("Test case {0}: ", testCase);
+
+                    using (IDbConnection connection = database.GetConnection())
                     {
-                        connection.ConnectionString = masterConnection;
                         connection.Open();
                         try
                         {
-                            ExecuteCommand(connection, "if db_id('r2rml4net_tests') is not null DROP DATABASE r2rml4net_tests");
-                            ExecuteCommand(connection, "CREATE DATABASE r2rml4net_tests");
-
-                            connection.ChangeDatabase("r2rml4net_tests");
-
                             ExecuteTests(connection, testCase);
                         }
                         catch (SqlException ex)
@@ -58,26 +50,11 @@ namespace TCode.r2rml4net.TestCasesRunner
                             LogTo.Fatal("FAIL: {0}", ex.Message);
                             return 1;
                         }
-                        finally
-                        {
-                            connection.ChangeDatabase("master");
-                            ExecuteCommand(connection, "ALTER DATABASE r2rml4net_tests SET SINGLE_USER WITH ROLLBACK IMMEDIATE");
-                            ExecuteCommand(connection, "ALTER DATABASE r2rml4net_tests SET MULTI_USER");
-                        }
                     }
                 }
             }
 
             return 0;
-        }
-
-        private static void ExecuteCommand(IDbConnection connection, string commandText)
-        {
-            using (var command = connection.CreateCommand())
-            {
-                command.CommandText = commandText;
-                command.ExecuteNonQuery();
-            }
         }
 
         private static void ExecuteTests(IDbConnection connection, string testCaseDirectory)

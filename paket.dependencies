@@ -15,3 +15,6 @@ nuget NLog.Schema
 nuget r2rml4net prerelease
 nuget VDS.Common
 nuget Anotar.NLog.Fody
+nuget SqlLocalDb
+
+github r2rml4net/test-cases

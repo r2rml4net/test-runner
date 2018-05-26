@@ -1,11 +1,12 @@
 [Bb]in
 [Oo]bj
-src/_ReSharper.TCode.r2rml4net.TestCasesRunner
+_ReSharper.TCode.r2rml4net.TestCasesRunner
 *.suo
 *.user
-src/packages/
+packages/
 test-cases
 test harness/*.ttl
 *.log
-/src/.paket/paket.exe
+.paket/paket.exe
 .vs/
+paket-files/
