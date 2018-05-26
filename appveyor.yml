@@ -1,0 +1,18 @@
+version: 1.0.{build}
+
+before_build:
+- ps: .paket/paket.bootstrapper.exe
+
+build:
+  verbosity: minimal
+
+before_test:
+- ps: bin\TCode.r2rml4net.TestCasesRunner.exe paket-files\r2rml4net\test-cases
+- ps: Push-Location "test harness"; rdb2rdf-th.bat ts.ttl; Pop-Location
+
+artifacts:
+- path: log.log
+- path: test harness\earl-r2rml4net-*.ttl
+- path: paket-files\r2rml4net\test-cases\**\*-r2rml4net.*
+  name: mapping results
+  type: zip
