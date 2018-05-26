@@ -22,4 +22,8 @@ NUGET
     r2rml4net (0.4.0-pre01)
       DatabaseSchemaReader (>= 1.2.8)
       dotNetRDF (>= 1.0)
+    SqlLocalDb (1.1)
     VDS.Common (1.10)
+GITHUB
+  remote: r2rml4net/test-cases
+    FULLPROJECT (1a71b9604fe0046f617985ee9de5fee15df0a89e)
