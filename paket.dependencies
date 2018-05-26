@@ -1,7 +1,7 @@
 source https://api.nuget.org/v3/index.json
 
 content: none
-framework: net452
+framework: net452, net462
 
 nuget CommandLineParser
 nuget DatabaseSchemaReader
@@ -16,5 +16,6 @@ nuget r2rml4net prerelease
 nuget VDS.Common
 nuget Anotar.NLog.Fody
 nuget SqlLocalDb
+nuget xunit
 
 github r2rml4net/test-cases
