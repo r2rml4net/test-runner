@@ -31,16 +31,15 @@ namespace TCode.r2rml4net.TestCasesRunner
                 return 1;
             }
 
-            using (var database = new LocalDatabase())
+            string testDir = args[0];
+            foreach (var testCase in Directory.EnumerateDirectories(testDir, "D*"))
             {
-                string testDir = args[0];
-                foreach (var testCase in Directory.EnumerateDirectories(testDir, "D*"))
-                {
-                    LogTo.Info("Test case {0}: ", testCase);
+                LogTo.Info("Test case {0}: ", testCase);
 
-                    using (IDbConnection connection = database.GetConnection())
+                using (var database = new LocalDatabase())
+                {
+                    using (var connection = database.GetConnection())
                     {
-                        connection.Open();
                         try
                         {
                             ExecuteTests(connection, testCase);
@@ -57,7 +56,7 @@ namespace TCode.r2rml4net.TestCasesRunner
             return 0;
         }
 
-        private static void ExecuteTests(IDbConnection connection, string testCaseDirectory)
+        private static void ExecuteTests(DbConnection connection, string testCaseDirectory)
         {
             string sqlScript = Path.Combine(testCaseDirectory, "create.sql");
             string directOutput = Path.Combine(testCaseDirectory, "directGraph-r2rml4net.ttl");
@@ -89,16 +88,15 @@ namespace TCode.r2rml4net.TestCasesRunner
             }
         }
 
-        private static void ExecuteDirectMappingTest(IDbConnection connection, string directMappingOutputPath)
+        private static void ExecuteDirectMappingTest(DbConnection connection, string directMappingOutputPath)
         {
             LogTo.Info("DIRECT: ");
 
-            var connectionString = ConfigurationManager.ConnectionStrings["SqlServer2008Test"];
-            using (var databaseReader = new DatabaseReader(connectionString.ConnectionString, connectionString.ProviderName))
+            using (var databaseReader = new DatabaseReader(connection))
             {
                 var metadataProvider = new DatabaseSchemaAdapter(databaseReader, ColumnTypeMapper);
                 var mappingGenerator = new DirectR2RMLMapping(metadataProvider, new Uri("http://example.com/base/"));
-               
+
                 using (new MappingScope(new MappingOptions().IgnoringDataErrors(false).IgnoringMappingErrors(false).WithDuplicateRowsPreserved(true)))
                 {
                     Func<IR2RML> mappings = () => mappingGenerator;
