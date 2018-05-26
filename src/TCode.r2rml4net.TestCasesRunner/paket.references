@@ -1,11 +1,4 @@
-DatabaseSchemaReader
-dotNetRDF
-HtmlAgilityPack
-Newtonsoft.Json
-NLog
 NLog.Config
-NLog.Schema
 r2rml4net
-VDS.Common
 Anotar.NLog.Fody
 SqlLocalDb
