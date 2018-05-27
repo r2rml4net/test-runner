@@ -8,7 +8,7 @@ build:
 
 before_test:
 - ps: bin\TCode.r2rml4net.TestCasesRunner.exe paket-files\r2rml4net\test-cases
-- ps: Push-Location "test harness"; rdb2rdf-th.bat ts.ttl; Pop-Location
+- ps: Push-Location "test harness"; .\rdb2rdf-th.bat ts.ttl; Pop-Location
 
 artifacts:
 - path: log.log
