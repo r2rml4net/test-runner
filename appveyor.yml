@@ -10,9 +10,7 @@ before_test:
 - ps: bin\TCode.r2rml4net.TestCasesRunner.exe paket-files\r2rml4net\test-cases
 - ps: Push-Location "test harness"; .\rdb2rdf-th.bat ts.ttl; Pop-Location
 
-artifacts:
-- path: log.log
-- path: test harness\earl-r2rml4net-*.ttl
-- path: paket-files\r2rml4net\test-cases\**\*-r2rml4net.*
-  name: mapping results
-  type: zip
+after_test:
+- ps: Push-AppveyorArtifact log.log -FileName generation.log
+- ps: Push-AppveyorArtifact "test harness\earl-r2rml4net-*.ttl"
+- ps: Push-AppveyorArtifact "test harness\earl-r2rml4net-*.ttl" -FileName "mapping results" -Type zip
