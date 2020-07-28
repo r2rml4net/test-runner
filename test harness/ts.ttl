@@ -9,7 +9,7 @@
 <ts> a rdb2rdftest:TestSuite;
 	dcterms:title "Test Suite for R2RML and Direct Mapping" ;
 	dcterms:identifier "TS-MS-01" ;
-	rdb2rdftest:workingDirectory "../paket-files/r2rml4net/test-cases" .
+	rdb2rdftest:workingDirectory "../test-cases" .
 	
 <myProject>
         a doap:Project ;
@@ -25,4 +25,3 @@
 		a foaf:Person ;
 		foaf:mbox <mailto:tomasz@t-code.pl> ;
 		foaf:name "Tomasz Pluskiewicz" .
-         

@@ -1,0 +1,24 @@
+name: Transform
+
+on: [push, pull_request]
+
+jobs:
+  transform:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '2.2'
+      - run: dotnet tool install -g r2rml4net-cli
+      - run: ./run.sh
+      - run: test\ harness/rdb2rdf-th ../ts.ttl
+      - uses: actions/upload-artifact@v2
+        with:
+          name: results
+          path: test-cases/**/*-r2rml4net.ttl
+      - uses: actions/upload-artifact@v2
+        with:
+          name: report
+          path: earl*.ttl
+

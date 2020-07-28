@@ -4,8 +4,7 @@ _ReSharper.TCode.r2rml4net.TestCasesRunner
 *.suo
 *.user
 packages/
-test-cases
-test harness/*.ttl
+test harness/earl*.ttl
 *.log
 .paket/paket.exe
 .vs/

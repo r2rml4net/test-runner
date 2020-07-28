@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2017-CU17-ubuntu
+    environment:
+      ACCEPT_EULA: Y
+      SA_PASSWORD: Passw0rd1
+    ports:
+      - 1433:1433
+    volumes:
+      - ./test-cases:/test-cases
+
+volumes:
+  test-cases:
