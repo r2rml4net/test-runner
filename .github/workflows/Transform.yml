@@ -7,12 +7,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Checkout submodules
+        uses: srt32/git-actions@v0.0.3
+        with:
+          args: git submodule update --init --recursive
       - uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '2.2'
       - run: dotnet tool install -g r2rml4net-cli
       - run: ./run.sh
-      - run: test\ harness/rdb2rdf-th ../ts.ttl
       - uses: actions/upload-artifact@v2
         with:
           name: results
