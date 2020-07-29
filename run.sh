@@ -17,9 +17,9 @@ do
   CASE_ConnectionString="$ConnectionString;Initial Catalog=$CASE"
 
   echo "Initialize database for test case $CASE"
-  docker-compose exec mssql /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P $PASSWORD -Q "drop database IF EXISTS [$CASE]"
-  docker-compose exec mssql /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P $PASSWORD -Q "create database [$CASE]"
-  docker-compose exec mssql /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P $PASSWORD -d "$CASE" -i "$caseDir/create.sql" -I
+  docker-compose exec -T mssql /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P $PASSWORD -Q "drop database IF EXISTS [$CASE]"
+  docker-compose exec -T mssql /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P $PASSWORD -Q "create database [$CASE]"
+  docker-compose exec -T mssql /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P $PASSWORD -d "$CASE" -i "$caseDir/create.sql" -I
 
   echo "Running direct mapping"
   r2rml4net direct \
