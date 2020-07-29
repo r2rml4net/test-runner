@@ -46,5 +46,8 @@ done
 
 echo "Generating EARL reports"
 (
-  cd "test harness"; ./rdb2rdf-th ts.ttl
+  cd "test harness"
+  ./rdb2rdf-th ts.ttl
+  mkdir -p ../reports
+  mv $(echo earl*.ttl) ../reports
 )

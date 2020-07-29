@@ -1,11 +1,3 @@
-[Bb]in
-[Oo]bj
-_ReSharper.TCode.r2rml4net.TestCasesRunner
-*.suo
-*.user
-packages/
 test harness/earl*.ttl
 *.log
-.paket/paket.exe
-.vs/
-paket-files/
+reports/

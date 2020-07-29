@@ -25,6 +25,10 @@ jobs:
           path: test-cases/**/*-r2rml4net.ttl
       - uses: actions/upload-artifact@v2
         with:
-          name: report
-          path: test harness/earl*.ttl
+          name: reports
+          path: reports/earl*.ttl
+      - name: GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v2.1.1
+        with:
+          build_dir: reports
 
