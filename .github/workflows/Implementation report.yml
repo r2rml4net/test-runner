@@ -12,6 +12,7 @@ jobs:
       - uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '2.2'
+      - run: docker-compose up -d mssql
       - run: dotnet tool install -g r2rml4net-cli
       - run: ./run.sh
       - uses: actions/upload-artifact@v2
