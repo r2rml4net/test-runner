@@ -1,0 +1,15 @@
+{
+  "name": "r2rml-implementation-reporter",
+  "version": "0.0.0",
+  "description": "Runs rdb2rdf test cases",
+  "main": "index.js",
+  "repository": "git@github.com:r2rml4net/test-runner.git",
+  "author": "tpluscode <tpluscode@users.noreply.github.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@rdfjs/namespace": "^1.1.0",
+    "@tpluscode/rdf-ns-builders": "^0.3.7",
+    "clownface-io": "zazuko/clownface-io#tpluscode-proposals"
+  }
+}
