@@ -26,7 +26,7 @@ jobs:
       
       # TODO: add steps to bootstrap your implementation
 
-      - run: ./run.sh
+      - run: ./run.sh -s r2rml4net-mssql
       - uses: actions/upload-artifact@v2
         with:
           name: results

@@ -11,10 +11,10 @@
 	dcterms:identifier "TS-MS-01" ;
 	rdb2rdftest:workingDirectory "../test-cases" .
 	
-<myProject>
+<r2rml4net/sqlserver>
         a doap:Project ;
-        doap:name "r2rml4net" ;
-        doap:homepage <http://r2rml.net>  ;
+        doap:name "r2rml4net-sqlserver" ;
+        doap:homepage <https://r2rml.net>  ;
         doap:programming-language "C#"  ;
         doap:developer <http://t-code.pl/me#this> ;        
         rdb2rdftest:dbms r2rml:MSSQLServer ;
