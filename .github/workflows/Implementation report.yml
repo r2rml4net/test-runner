@@ -1,6 +1,12 @@
 name: Implementation report
 
-on: [push, pull_request]
+on: 
+  push:
+    branches:
+    - master
+  pull_request:
+    branches:
+    - master
 
 jobs:
   transform:
@@ -9,20 +15,22 @@ jobs:
       - uses: actions/checkout@v2
         with:
           submodules: recursive
-      - uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: '2.2'
+      
+      # TODO: add steps to set require environment
+      
       - name: Setup Java JDK
         uses: actions/setup-java@v1.4.0
         with:
           java-version: 13
-      - run: docker-compose up -d mssql
-      - run: dotnet tool install -g r2rml4net-cli
+      - run: docker-compose up -d
+      
+      # TODO: add steps to bootstrap your implementation
+
       - run: ./run.sh
       - uses: actions/upload-artifact@v2
         with:
           name: results
-          path: test-cases/**/*-r2rml4net.ttl
+          path: test-cases/**/*-*.ttl
       - uses: actions/upload-artifact@v2
         with:
           name: reports
