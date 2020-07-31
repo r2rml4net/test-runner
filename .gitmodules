@@ -1,3 +1,0 @@
-[submodule "test-cases"]
-	path = test-cases
-	url = git@github.com:r2rml4net/test-cases.git

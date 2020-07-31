@@ -1,3 +1,4 @@
 *.log
 reports/*.ttl
 node_modules
+test-cases/
