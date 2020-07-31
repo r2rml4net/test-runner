@@ -1,32 +1,35 @@
 name: Implementation report
 
-on: 
+on:
   push:
     branches:
-    - master
+      - master
   pull_request:
     branches:
-    - master
+      - master
 
 jobs:
   transform:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: git clone https://github.com/r2rml4net/test-cases.git --depth 1
+      - uses: actions/setup-node@v1
         with:
-          submodules: recursive
-      
+          node-version: '13'
+
       # TODO: add steps to set require environment
-      
+
       - name: Setup Java JDK
         uses: actions/setup-java@v1.4.0
         with:
           java-version: 13
       - run: docker-compose up -d
-      
+      - run: yarn
+
       # TODO: add steps to bootstrap your implementation
 
-      - run: ./run.sh -s r2rml4net-mssql
+      - run: ./index.js
       - uses: actions/upload-artifact@v2
         with:
           name: results

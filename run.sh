@@ -57,7 +57,7 @@ do
   done
 done
 
-if [ ! $NoReport -eq 0 ]
+if [ $NoReport -eq 0 ]
 then
   echo "Generating EARL reports"
   (
