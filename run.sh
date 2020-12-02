@@ -1,4 +1,5 @@
 #!/bin/bash
+set -u
 
 grep=""
 NoReport=0
@@ -8,14 +9,13 @@ while [[ "$#" -gt 0 ]]; do
         -g|--grep) grep="$2"; shift ;;
         --no-report) NoReport=1 ;;
         -s) Suffix="$2"; shift ;;
+        --engine) engine="$2"; shift ;;
         *) echo "Unknown parameter passed: $1"; exit 1 ;;
     esac
     shift
 done
 
 CASES="./test-cases/$grep*"
-PASSWORD="Passw0rd1"
-ConnectionString="Server=tcp:localhost,1433;User ID=sa;Password=$PASSWORD"
 
 trap 'exit 1' int
 
@@ -27,19 +27,19 @@ do
   fi
 
   CASE=$(basename "$caseDir")
-  CASE_ConnectionString="$ConnectionString;Initial Catalog=$CASE"
 
   echo "Initialize database for test case $CASE"
-  docker-compose exec -T mssql /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P $PASSWORD -Q "drop database IF EXISTS [$CASE]"
-  docker-compose exec -T mssql /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P $PASSWORD -Q "create database [$CASE]"
-  docker-compose exec -T mssql /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P $PASSWORD -d "$CASE" -i "$caseDir/create.sql" -I
+  ./scripts/init-db.sh \
+    --engine "$engine" \
+    --database "$CASE" \
+    --script "$caseDir/create.sql"
 
   echo "Running direct mapping"
-  r2rml4net direct \
-    -c "$CASE_ConnectionString" \
-    -o "$caseDir/directGraph-$Suffix.ttl" \
-    -b http://example.com/base/ \
-    --preserve-duplicate-rows
+  ./scripts/direct.sh \
+    --database "$CASE" \
+    --output "$caseDir/directGraph-$Suffix.ttl" \
+    --base http://example.com/base/ \
+    --engine "$engine"
 
   echo "Running R2RML test cases"
 
@@ -49,11 +49,12 @@ do
   for rml in $RML_CASES
   do
     RML_OUT=$(echo "$rml" | sed -e 's/r2rml/mapped/g' -e "s/\.ttl$/-$Suffix.nq/g")
-    r2rml4net rml \
-      -c "$CASE_ConnectionString" \
-      -m "$rml" \
-      -o "$RML_OUT" \
-      -b http://example.com/base/
+    ./scripts/r2rml.sh \
+      --database "$CASE" \
+      --mapping "$rml" \
+      --output "$RML_OUT" \
+      --base http://example.com/base/ \
+      --engine "$engine"
   done
 done
 
